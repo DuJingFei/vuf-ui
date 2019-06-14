@@ -1,6 +1,6 @@
-# vus
+# vuf-ui
 
-> A Vue.js project
+> a amazing ui-store
 
 ## Build Setup
 
