@@ -1,8 +1,11 @@
 import Button from './button'
+import DateSelector from './DateSelector'
 import '../scss/jf.scss'
+import '../styleLess/common.less'
 
 const components = {
-  Button
+  Button,
+  DateSelector
 }
 
 const install = function (Vue) {

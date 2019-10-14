@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './scss/jf.scss'
+import '../styleLess/common.less'
 import lyui from './components/index'
-Vue.use(lyui) 
+Vue.use(lyui)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

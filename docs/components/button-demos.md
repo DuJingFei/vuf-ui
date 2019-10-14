@@ -2,7 +2,7 @@
 title: Button
 ---
 
-# 按钮
-使用方法
-<my-hello></my-hello>
+# 哈哈
+按钮
+<kd-button></kd-button>
 

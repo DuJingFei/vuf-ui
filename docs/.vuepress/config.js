@@ -26,7 +26,10 @@ module.exports = {
             },
             {
               title: '组件',
-              children: ['/components/button-demos']
+              children: [
+                '/components/button-demos',
+                '/components/dateselector-demos'
+              ]
             }
       ],
       
@@ -58,6 +61,7 @@ module.exports = {
               '@': resolve('docs'),
               '@src': resolve('src'),
               '@scss': resolve('src/scss'),
+              '@less': resolve('src/styleLess'),
               '@components': resolve('src/components'),
               '@utils': resolve('src/utils')
             }
