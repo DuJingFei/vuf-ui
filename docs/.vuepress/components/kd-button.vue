@@ -4,6 +4,7 @@
          <kd-button primary>浅色按钮</kd-button>
          <kd-button circle>默认按钮</kd-button>
          <kd-button warn>橙色</kd-button>
+         <kd-button forbid>禁止</kd-button>
          <kd-button uploadImage>上传图片</kd-button>
          <kd-button size='large'>大图标</kd-button>
          <kd-button size='large' uploadImage>icon大图标</kd-button>
@@ -14,7 +15,6 @@
          <kd-button plain basic>浅色按钮</kd-button>
          <kd-button plain circle>默认按钮</kd-button>
          <kd-button plain warn>橙色</kd-button>
-         <kd-button plain uploadImage>上传图片</kd-button>
          <kd-button plain size='large'>大图标</kd-button>
          <kd-button plain size='large' uploadImage>icon大图标</kd-button>
        </section>

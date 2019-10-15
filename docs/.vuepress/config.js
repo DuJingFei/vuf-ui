@@ -28,7 +28,8 @@ module.exports = {
               title: '组件',
               children: [
                 '/components/button-demos',
-                '/components/dateselector-demos'
+                '/components/select-demos',
+                '/components/dateselector-demos',
               ]
             }
       ],

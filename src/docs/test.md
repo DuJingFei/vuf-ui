@@ -1,22 +1,20 @@
 ### 按钮 Button
 
 #### 正常状态（Normal Size）
-<div class="component-wrapper">
-    <ag-button class="mr10" title="默认按钮">默认按钮</ag-button>
-    <ag-button class="mr10" primary>主按钮</ag-button>
-    <ag-button class="mr10" secondary>次级按钮</ag-button>
-    <ag-button class="mr10" dashed>虚线按钮</ag-button>
-    <ag-button class="mr10" link>文字按钮</ag-button>
-    <ag-button class="mr10" link href="//www.baidu.com" target="_blank" external>外链按钮</ag-button>
-</div>
-
 <date-selector></date-selector>
-``` vue
-<ag-button class="mr10" title="默认按钮">默认按钮</ag-button>
-<ag-button class="mr10" primary>主按钮</ag-button>
-<ag-button class="mr10" secondary>次级按钮</ag-button>
-<ag-button class="mr10" dashed>虚线按钮</ag-button>
-<ag-button class="mr10" link>文字按钮</ag-button>
-<ag-button class="mr10" link href="//www.baidu.com" target="_blank" external>外链按钮</ag-button>
-```
+
+<section class="plain-background">
+    <kd-button plain primary>浅色按钮</kd-button>
+    <kd-button plain basic>浅色按钮</kd-button>
+    <kd-button plain circle>默认按钮</kd-button>
+    <kd-button plain warn>橙色</kd-button>
+    <kd-button plain size='large'>大图标</kd-button>
+    <kd-button plain size='large' uploadImage>icon大图标</kd-button>
+</section>
+
+<kd-select >
+  <kd-option/>
+</kd-select>
+
+<p>121212</p>
 
