@@ -8,7 +8,8 @@
                 'has-icon':hasIcon
               }]"
               type="text" 
-              :value="bindVal"
+              readonly
+              :value="result"
               placeholder="请选择" 
               @click="displayDropdown"
             />
@@ -21,7 +22,7 @@
          <div v-show="showDropdown">
             <div class="kd-select-dropdown kd-popper">
               <div class="kd-scrollbar">
-                <ul class="kd-select-dropdown__list">
+                <ul ref="dropdownList" class="kd-select-dropdown__list">
                   <slot></slot>
                 </ul>       
               </div>
@@ -47,6 +48,12 @@ export default {
        showDropdown: false,
     }
   },
+  created() {
+    // 必须得是在created钩子里注入绑定值
+    if(this.bindVal) {
+       this.result = this.bindVal;
+    }
+  },
   methods: {
      displayDropdown() {
        this.showDropdown = !this.showDropdown;
@@ -55,8 +62,8 @@ export default {
        this.showDropdown = false;
      },
      getChoice(val) {
-       debugger
-       this.$emit('bindEvent', val)
+       this.result = val.label
+       this.$emit('bindEvent', val.value)
      }
   },
   directives: {

@@ -2,7 +2,7 @@
     <div>
        <li 
         class="kd-select-dropdown__item"
-        @click="choice(value)"
+        @click="choice({ value:value, label:label })"
         >{{label}}</li>
     </div>
 </template>
@@ -10,6 +10,11 @@
 export default {
    name:'kd-option',
    props: ['value', 'label'],
+   mounted() {
+      if(this.$parent.result == this.value) {
+         this.$parent.result = this.label;
+      }
+   },
    methods: {
       choice(val) {
         this.$parent.getChoice(val)

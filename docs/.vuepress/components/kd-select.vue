@@ -23,7 +23,7 @@ export default {
    },
    data() {
       return {
-        endVal: '',
+        endVal: 'Juventus',
         tempOptions: [
             {
               value: 'Juventus',
