@@ -23,7 +23,7 @@ export default {
    },
    data() {
       return {
-        endVal: 'Juventus',
+        endVal: '',
         tempOptions: [
             {
               value: 'Juventus',
@@ -44,15 +44,10 @@ export default {
         ]
       }
    },
-   watch: {
-     endVal(newVal , val) {
-        debugger
-     }
+   mounted() {
+      let getVal = setTimeout(()=> {
+        this.endVal = 'Juventus'
+      },2000)
    },
-   methods: {
-      getChoice(val) {
-          debugger
-      }
-   }
 }
 </script>

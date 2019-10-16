@@ -10,9 +10,19 @@
 export default {
    name:'kd-option',
    props: ['value', 'label'],
+   watch: {
+     '$parent.result': {
+         handler(newVal , val) {
+            if(newVal && newVal === this.value) {
+               this.$parent.result = this.label;
+            }
+         },
+         immediate: true
+     }
+   },
    mounted() {
-      if(this.$parent.result == this.value) {
-         this.$parent.result = this.label;
+      if(this.$parent.result && this.$parent.result === this.value) {
+         this.$parent.result = this.label
       }
    },
    methods: {
