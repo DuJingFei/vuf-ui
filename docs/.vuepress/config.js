@@ -30,6 +30,7 @@ module.exports = {
                 '/components/button-demos',
                 '/components/select-demos',
                 '/components/dateselector-demos',
+                '/components/textarea-demos',
               ]
             }
       ],

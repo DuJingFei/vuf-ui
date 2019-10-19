@@ -16,5 +16,5 @@
   <kd-option/>
 </kd-select>
 
-<p>121212</p>
+<kd-textarea></kd-textarea>
 

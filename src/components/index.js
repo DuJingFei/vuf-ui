@@ -2,6 +2,7 @@ import Button from './button'
 import DateSelector from './DateSelector'
 import Select from './select'
 import Option from './option'
+import Textarea from './textarea'
 import '../scss/jf.scss'
 import '../styleLess/common.less'
 
@@ -9,7 +10,8 @@ const components = {
   Button,
   DateSelector,
   Select,
-  Option
+  Option,
+  Textarea
 }
 
 const install = function (Vue) {

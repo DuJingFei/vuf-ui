@@ -149,22 +149,6 @@ export default {
         padding: 6px 0;
         margin: 0;
         box-sizing: border-box;
-        .kd-select-dropdown__item {
-            font-size: 14px;
-            padding: 0 20px;
-            position: relative;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: #606266;
-            height: 34px;
-            line-height: 34px;
-            box-sizing: border-box;
-            cursor: pointer;
-            &:hover {
-              background-color: #f5f7fa;
-            }
-        }
       }
   }
 }
