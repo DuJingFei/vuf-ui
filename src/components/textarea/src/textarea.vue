@@ -1,5 +1,6 @@
 <template>
    <div class="kd-textarea">
+       <!--
        <section>
           <textarea 
            v-model="bindValue"
@@ -14,6 +15,7 @@
        <section v-if="remoteSearch">
            <slot></slot>
        </section>
+       -->
    </div>
 </template>
 <script>
