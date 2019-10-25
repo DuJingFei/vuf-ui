@@ -1,19 +1,19 @@
 <template>
    <div class="kd-textarea">
-       <section>
+       <section class="textarea-content">
           <textarea 
-           v-model="bindValue"
+           v-model="value"
            :placeholder="placeHolder"
            :rows='rows'
            :maxlength="maxLength"
            @input="changeContent()"
            @focus="focus()"
           ></textarea>
-          <div v-show="needRemind && bindValue.length > 0" class="limit-remind" >还可输入{{capacity}}个字</div>
+          <div v-show="needRemind && value && value.length > 0" class="limit-remind" >还可输入{{capacity}}个字</div>
        </section>
        <section v-if="remoteSearch">
            <slot></slot>
-       </section>
+       </section> 
    </div>
 </template>
 <script>
@@ -42,18 +42,22 @@ export default {
            default: 1
        },
        placeHolder: {
-           type: String,
-           default:''
+          type: String,
+          default:''
        }
+   },
+   data() {
+      return {
+        value: this.bindValue,
+      }
    },
    computed: {
       capacity() {
-          return this.maxLength - this.bindValue.length;
+        return this.value ? this.maxLength - this.value.length : this.maxLength;
       }
    },
    methods: {
       changeContent() {
-          
           console.log('1212');
       },
       focus() {
@@ -66,6 +70,9 @@ export default {
 <style lang="less">
 .kd-textarea {
     display: block;
+    .textarea-content {
+        position: relative;
+    }
     textarea {
         cursor: pointer;
         -webkit-appearance: none;

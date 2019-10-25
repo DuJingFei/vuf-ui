@@ -2,7 +2,7 @@
 title: Textarea
 ---
 
-# 哈哈
-输入框
+# 远程搜索框
+
 <kd-textarea></kd-textarea>
 
