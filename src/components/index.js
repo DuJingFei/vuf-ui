@@ -3,6 +3,8 @@ import DateSelector from './DateSelector'
 import Select from './select'
 import Option from './option'
 import Textarea from './textarea'
+import BlockSelector from './blockSelector'
+import BlockDropdown from './blockDropdown'
 import '../scss/jf.scss'
 import '../styleLess/common.less'
 
@@ -11,7 +13,9 @@ const components = {
   DateSelector,
   Select,
   Option,
-  Textarea
+  Textarea,
+  BlockSelector,
+  BlockDropdown
 }
 
 const install = function (Vue) {

@@ -31,6 +31,7 @@ module.exports = {
                 '/components/select-demos',
                 '/components/dateselector-demos',
                 '/components/textarea-demos',
+                '/components/block-selector',
               ]
             }
       ],

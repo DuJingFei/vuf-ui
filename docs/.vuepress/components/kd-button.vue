@@ -1,4 +1,5 @@
 <template>
+    <!--
     <div>
        <section class="full-background">
          <kd-button primary>浅色按钮</kd-button>
@@ -18,10 +19,8 @@
          <kd-button plain size='large'>大图标</kd-button>
          <kd-button plain size='large' uploadImage>icon大图标</kd-button>
        </section>
-
-
-    </div>
-    
+    </div>-->
+    <kd-button><slot></slot></kd-button>
 </template>
 <script>
 import Button from '@components/button'
