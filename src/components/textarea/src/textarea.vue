@@ -1,6 +1,6 @@
 <template>
    <div class="kd-textarea">
-       <section class="textarea-content">
+       <section class="textarea-content" v-outsideClick='closeDropdown'>
           <textarea 
            v-model="value"
            :placeholder="placeHolder"
@@ -11,8 +11,12 @@
           ></textarea>
           <div v-show="needRemind && value && value.length > 0" class="limit-remind" >还可输入{{capacity}}个字</div>
        </section>
-       <section v-if="remoteSearch">
-           <slot></slot>
+       <section v-if="remoteSearch && showDropdown">
+           <div class="kd-search-remote-dropdown kd-popper">
+              <ul ref="dropdownList" class="kd-search-remote-dropdown__list">
+                 <slot></slot>
+              </ul>
+           </div>
        </section> 
    </div>
 </template>
@@ -49,6 +53,7 @@ export default {
    data() {
       return {
         value: this.bindValue,
+        showDropdown: false,
       }
    },
    computed: {
@@ -61,8 +66,15 @@ export default {
           console.log('1212');
       },
       focus() {
-          
           console.log(2);
+          this.showDropdown = true;
+      },
+      closeDropdown() {
+        this.showDropdown = false;
+      },
+      getChoice(val) {
+        this.value = val.label
+        this.$emit('bindEvent', val.value)
       }
    }
 }

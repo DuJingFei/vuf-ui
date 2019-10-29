@@ -69,5 +69,8 @@ module.exports = {
               '@utils': resolve('src/utils')
             }
         }
-    }
+    },
+    plugins: [
+     // require('@src/styleLess/common.less')
+    ]
   }  

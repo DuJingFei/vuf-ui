@@ -1,6 +1,7 @@
 import Vue from 'vue'
+import _ from 'lodash'
 
-Vue.directive('outsideClick1',{
+Vue.directive('outsideClick',{
     bind: function(el,binding,vnode) {
        el.clickOutsideEvent = function(event) {
            if(!(el == event.target || el.contains(event.target))) {

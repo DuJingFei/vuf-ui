@@ -75,7 +75,7 @@ export default {
        this.result = val.label
        this.$emit('bindEvent', val.value)
      }
-  },
+  },/*
   directives: {
     outsideClick: {
       bind: function(el,binding,vnode) {
@@ -90,7 +90,7 @@ export default {
         document.body.removeEventListener('click', el.clickOutsideEvent)
       }
     }
-  }
+  } */
 };
 </script>
 <style lang="less">
@@ -132,24 +132,6 @@ export default {
       transition: all .3s;
       pointer-events: none;
     }
-  }
-
-  .kd-select-dropdown {
-      position: absolute;
-      width: 100%;
-      margin-top: 12px;
-      border: 1px solid #e4e7ed;
-      border-radius: 4px;
-      background-color: #fff;
-      box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
-      box-sizing: border-box;
-      margin: 5px 0;
-      .kd-select-dropdown__list {
-        list-style: none;
-        padding: 6px 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
   }
 }
 </style>

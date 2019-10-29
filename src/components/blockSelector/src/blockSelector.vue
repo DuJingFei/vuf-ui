@@ -26,27 +26,28 @@ import Vue from 'vue'
 import Button from '../../button/src/button'
 export default {
    name: 'block-selector',
+   /*
+   model: {
+     prop: 'selectedArray',
+     event: 'bindSelectedArray'
+   }, */
    props: {
      selectedArray: {
          type: [Array],
          default: []
      }
    },
-   components: {
-      'kd-button': Button
-   },
    computed: {
        // 所有已选项id集
        selectedIds() {
-          return this.selectedArray && this.selectedArray.map(item => {
-              return item.id
-          })
+          return this.selectedArray && Array.from(this.selectedArray , ({id}) => id);
        }
    },
    watch: {
       selectedIds: {
          handler(newVal , val) {
-         //  this.statusHandler();
+          // this.$emit('bindSelectedArray', this.selectedArray)
+          // this.statusHandler();
          },
          immediate: true,
          deep: true
@@ -82,9 +83,6 @@ export default {
          else {
            this.selectedArray.splice(itemIndex, 1);
          }
-      },
-      openDropdown() {
-         
       }
    },
 }
