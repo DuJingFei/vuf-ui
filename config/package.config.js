@@ -40,14 +40,27 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/
-    }, {
+    }, 
+    {
       test: /\.css$/,
       use: [
         'style-loader',
         'css-loader',
         'autoprefixer-loader'
       ]
-    }, {
+    }, 
+    /*
+    {
+        test: /\.less$/,
+        use: [{
+            loader: "style-loader" // creates style nodes from JS strings
+        }, {
+            loader: "css-loader" // translates CSS into CommonJS
+        }, {
+            loader: "less-loader" // compiles Less to CSS
+        }]
+    }, */
+    {
       test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
       loader: 'url-loader?limit=8192'
     }]

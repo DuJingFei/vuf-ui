@@ -71,6 +71,6 @@ module.exports = {
         }
     },
     plugins: [
-     // require('@src/styleLess/common.less')
+     // require('../../src/styleLess/common.less')
     ]
-  }  
+  }

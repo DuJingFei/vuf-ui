@@ -9,10 +9,12 @@ module.exports = merge(baseWebpackConfig, {
     filename: '[name].js'
   },
   module: {
-    loaders: [{
-      test: /\.scss$/i,
-      loader: extractScss.extract(['css-loader', 'sass-loader'])
-    }]
+    loaders: [
+        {
+          test: /\.scss$/i,
+          loader: extractScss.extract(['css-loader', 'sass-loader'])
+        },
+    ]
   },
   plugins: [
     new webpack.DefinePlugin({

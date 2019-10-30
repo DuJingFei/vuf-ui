@@ -24,9 +24,8 @@
 </template>
 <script>
 import Button from '@components/button'
-//import '@scss/jf.scss'
-import '@less/common.less'
-import '@src/libs/directives.js'
+// import '@scss/jf.scss'
+// import '@src/libs/directives.js'
 export default {
    name:'kd-button-demos',
    components: {
