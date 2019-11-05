@@ -26,21 +26,6 @@
             </div>
           </div>
        </div>
-       
-       <!--
-       <select 
-       class="year select"
-       v-model="currentDate.year"
-        @change='judgeDay'
-        placeholder="年">
-          <option
-            v-for="item in years"
-            :key="item"
-            :label="item"
-            :value="item">
-          </option>
-       </select>
-       -->
 
        <div class="kd-month-selector kd-type-selector">
           <div class="kd-input month-selector" v-outsideClick='closeMonthDropdown'>
@@ -68,22 +53,9 @@
             </div>
           </div>
        </div>
-       
-       <!--
-       <select 
-       class="month select"
-       v-model="currentDate.month" 
-       @change='judgeDay'
-       placeholder="月">
-          <option
-            v-for="item in months"
-            :key="item"
-            :label="String(item).length==1?String('0'+item):String(item)"
-            :value="item">
-          </option>
-       </select> -->
 
-       <div class="kd-day-selector kd-type-selector">
+
+       <div class="kd-day-selector kd-type-selector" :class="{'kd-selector-error':hasError}">
           <div class="kd-input day-selector" v-outsideClick='closeDayDropdown'>
           <input 
             class="kd-input-inner" 
@@ -109,21 +81,6 @@
             </div>
           </div>
         </div>
-  
-       <!--
-       <select 
-       class="day select"
-       :class="{'error':hasError}"
-       v-model="currentDate.day" 
-       placeholder="日">
-          <option
-            v-for="item in days"
-            :key="item"
-            :label="String(item).length==1?String('0'+item):String(item)"
-            :value="item">
-          </option>
-       </select>
-      -->
 
     </div>
 </template>
