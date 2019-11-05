@@ -8,7 +8,7 @@
             readonly
             :value="currentDate.year"
             placeholder="年" 
-            @click="showYearsDropdown=true"
+            @click="showYearsDropdown = !showYearsDropdown"
           />
         </div>
         <div v-show="showYearsDropdown">
@@ -50,7 +50,7 @@
             readonly
             :value="currentDate.month"
             placeholder="月" 
-            @click="showMonthsDropdown=true"
+            @click="showMonthsDropdown =! showMonthsDropdown"
           />
         </div>
         <div v-show="showMonthsDropdown">
@@ -91,7 +91,7 @@
             readonly
             :value="currentDate.day"
             placeholder="日" 
-            @click="showDaysDropdown=true"
+            @click="showDaysDropdown =! showDaysDropdown"
           />
         </div>
         <div v-show="showDaysDropdown">
@@ -156,10 +156,15 @@ export default {
     }
   },
   watch: {
-    sourceDate() {
-      if (this.sourceDate) {
-        this.currentDate = this.timestampToTime(this.sourceDate);
-      }
+    sourceDate: {
+      handler(newVal , val) {
+        if (newVal) {
+          this.currentDate = this.timestampToTime(newVal);
+          console.log(newVal)
+        }
+      },
+      deep: true,
+      immediate: true
     },
     normalMaxDays() {
       this.getFullDays();
