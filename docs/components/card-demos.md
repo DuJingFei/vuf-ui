@@ -1,5 +1,5 @@
 ---
-title: Card
+title: 卡片
 ---
 
 # 卡片

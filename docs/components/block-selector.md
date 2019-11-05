@@ -1,5 +1,5 @@
 ---
-title: blockSelector
+title: 块级选择器
 ---
 
 # selector
