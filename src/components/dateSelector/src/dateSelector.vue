@@ -1,5 +1,33 @@
 <template>
-    <div class="date-selector">
+    <div class="kd-date-selector">
+       <div class="kd-year-selector kd-type-selector">
+          <div class="kd-input year-selector" v-outsideClick='closeYearDropdown'>
+          <input 
+            class="kd-input-inner" 
+            type="text" 
+            readonly
+            :value="currentDate.year"
+            placeholder="年" 
+            @click="showYearsDropdown=true"
+          />
+        </div>
+        <div v-show="showYearsDropdown">
+            <div class="kd-select-dropdown kd-popper">
+              <div class="kd-scrollbar">
+                <ul ref="dropdownList" class="kd-select-dropdown__list">
+                  <li 
+                    class="option-item"
+                    v-for="(item,i) in years"
+                  :key="item"
+                  @click="choiceOption(item,'year')"
+                  >{{item}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+       </div>
+       
+       <!--
        <select 
        class="year select"
        v-model="currentDate.year"
@@ -12,6 +40,36 @@
             :value="item">
           </option>
        </select>
+       -->
+
+       <div class="kd-month-selector kd-type-selector">
+          <div class="kd-input month-selector" v-outsideClick='closeMonthDropdown'>
+          <input 
+            class="kd-input-inner" 
+            type="text" 
+            readonly
+            :value="currentDate.month"
+            placeholder="月" 
+            @click="showMonthsDropdown=true"
+          />
+        </div>
+        <div v-show="showMonthsDropdown">
+            <div class="kd-select-dropdown kd-popper">
+              <div class="kd-scrollbar">
+                <ul ref="dropdownList" class="kd-select-dropdown__list">
+                  <li 
+                    class="option-item"
+                    v-for="(item,i) in months"
+                  :key="item"
+                  @click="choiceOption(item,'month')"
+                  >{{ String(item).length==1?String('0'+item):String(item) }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+       </div>
+       
+       <!--
        <select 
        class="month select"
        v-model="currentDate.month" 
@@ -23,7 +81,36 @@
             :label="String(item).length==1?String('0'+item):String(item)"
             :value="item">
           </option>
-       </select>
+       </select> -->
+
+       <div class="kd-day-selector kd-type-selector">
+          <div class="kd-input day-selector" v-outsideClick='closeDayDropdown'>
+          <input 
+            class="kd-input-inner" 
+            type="text" 
+            readonly
+            :value="currentDate.day"
+            placeholder="日" 
+            @click="showDaysDropdown=true"
+          />
+        </div>
+        <div v-show="showDaysDropdown">
+            <div class="kd-select-dropdown kd-popper">
+              <div class="kd-scrollbar">
+                <ul ref="dropdownList" class="kd-select-dropdown__list">
+                  <li 
+                    class="option-item"
+                    v-for="(item,i) in days"
+                  :key="item"
+                  @click="choiceOption(item,'day')"
+                  >{{ String(item).length==1 ? String('0'+ item):String(item) }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+       <!--
        <select 
        class="day select"
        :class="{'error':hasError}"
@@ -36,6 +123,8 @@
             :value="item">
           </option>
        </select>
+      -->
+
     </div>
 </template>
 <script>
@@ -53,6 +142,10 @@ export default {
         month: "",
         day: ""
       },
+      showYearsDropdown: false,
+      showMonthsDropdown: false,
+      showDaysDropdown: false,
+
       maxYear: new Date().getFullYear(),
       minYear: 1930,
       years: [],
@@ -158,6 +251,29 @@ export default {
       } else {
         this.normalMaxDays = 31;
       }
+    },
+    choiceOption(val,type) {
+       switch(type) {
+         case 'year':
+           this.currentDate.year = val;
+         break;
+         case 'month':
+           this.currentDate.month = val;
+           break;
+         case 'day':
+           this.currentDate.day = val;
+           break;
+       }
+       
+    },
+    closeYearDropdown() {
+      this.showYearsDropdown = false;
+    },
+    closeMonthDropdown() {
+      this.showMonthsDropdown = false;
+    },
+    closeDayDropdown() {
+      this.showDaysDropdown = false;
     }
   }
 };

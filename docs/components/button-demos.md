@@ -12,7 +12,7 @@ title: Button
         <kd-button class='forbid'>禁止</kd-button>
         <kd-button class='uploadImage'>上传图片</kd-button>
         <kd-button size='large'>大图标</kd-button>
-        <kd-button size='large' class='uploadImage'>icon大图标</kd-button>
+        <kd-button size='large' class='uploadImage'>icon大图标</kd-button> 
     </section>
     <section class="plain-background">
         <kd-button class='plain primary'>浅色按钮</kd-button>
@@ -20,7 +20,7 @@ title: Button
         <kd-button class='plain circle'>默认按钮</kd-button>
         <kd-button class='plain warn'>橙色</kd-button>
         <kd-button class='plain' size='large'>大图标</kd-button>
-        <kd-button class='plain uploadImage' size='large'>icon大图标</kd-button>
+        <kd-button class='plain uploadImage' size='large'>icon大图标</kd-button> 
     </section>
 </div>
 

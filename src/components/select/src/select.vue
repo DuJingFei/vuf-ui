@@ -93,47 +93,5 @@ export default {
   } */
 };
 </script>
-<style lang="less">
-.kd-input-select {
-   width: 180px;
-   position: relative;
-   .kd-input {
-      position: relative;
-    .kd-input-inner {
-     cursor: pointer;
-     background-color: #fff;
-     border-radius: 4px;
-     border: 1px solid #dcdfe6;
-     box-sizing: border-box;
-     color: #606266;
-     display: inline-block;
-     font-size: inherit;
-     height: 40px;
-     line-height: 40px;
-     outline: none;
-     padding: 0 15px;
-     transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-     width: 100%;
-     &:focus {
-       border: 1px solid #1989fa;
-     }
-     &.has-icon {
-        padding: 0 15px;
-        padding-right: 30px;
-     }
-    }
-    .input-icon {
-      position: absolute;
-      height: 100%;
-      right: 5px;
-      top: 0;
-      text-align: center;
-      color: #c0c4cc;
-      transition: all .3s;
-      pointer-events: none;
-    }
-  }
-}
-</style>
 
 

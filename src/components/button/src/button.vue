@@ -75,6 +75,6 @@ export default {
         btnSize() {
             return this.size || 'normal'
         }
-    }
+    },
 }
 </script>

@@ -1,10 +1,12 @@
 .kd-input-select {
     width: 180px;
     position: relative;
-    .kd-input {
-       position: relative;
-     .kd-input-inner {
-      cursor: pointer;
+ }
+ .kd-input {
+    position: relative;
+  }
+ .kd-input-inner {
+    cursor: pointer;
       background-color: #fff;
       border-radius: 4px;
       border: 1px solid #dcdfe6;
@@ -18,27 +20,24 @@
       padding: 0 15px;
       transition: border-color .2s cubic-bezier(.645,.045,.355,1);
       width: 100%;
-      &:focus {
-        border: 1px solid #1989fa;
-      }
-      &.has-icon {
-         padding: 0 15px;
-         padding-right: 30px;
-      }
-     }
-     .input-icon {
-       position: absolute;
-       height: 100%;
-       right: 5px;
-       top: 0;
-       text-align: center;
-       color: #c0c4cc;
-       transition: all .3s;
-       pointer-events: none;
-     }
-   }
+    &:focus {
+      border: 1px solid #1989fa;
+    }
+    &.has-icon {
+      padding: 0 15px;
+      padding-right: 30px;
+    }
  }
-
+ .input-icon {
+   position: absolute;
+   height: 100%;
+   right: 5px;
+   top: 0;
+   text-align: center;
+   color: #c0c4cc;
+   transition: all .3s;
+   pointer-events: none;
+ }
  .kd-select-dropdown {
     position: absolute;
     width: 100%;
@@ -49,6 +48,9 @@
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
     box-sizing: border-box;
     margin: 5px 0;
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
   }
   .kd-select-dropdown__list {
     list-style: none;
