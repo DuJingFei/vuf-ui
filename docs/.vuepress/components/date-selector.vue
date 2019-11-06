@@ -1,7 +1,7 @@
 
 <template>
     <div>
-      <date-delector :sourceDate='1571035189410'></date-delector>
+      <date-delector v-model="sourceDate" ></date-delector>
     </div>
 </template>
 <script>
@@ -10,7 +10,17 @@ export default {
    name:'date-selector',
    components: {
       'date-delector': DateSelector
-   }
+   },
+   data() {
+      return {
+         sourceDate: 1571035189410,
+      }
+   },
+   watch: {
+      sourceDate(newVal , val) {
+        
+      }
+   },
 }
 </script>
 

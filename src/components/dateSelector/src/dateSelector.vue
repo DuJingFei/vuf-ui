@@ -86,12 +86,16 @@
 </template>
 <script>
 export default {
+  name: "date-selector",
   props: {
-    sourceDate: {
+    dateVal: {
       type: [String, Number]
     }
   },
-  name: "date-selector",
+  model: {
+     prop: 'dateVal',
+     event: 'updateDateVal'
+  },
   data() {
     return {
       currentDate: {
@@ -113,11 +117,10 @@ export default {
     }
   },
   watch: {
-    sourceDate: {
+    dateVal: {
       handler(newVal , val) {
         if (newVal) {
           this.currentDate = this.timestampToTime(newVal);
-          console.log(newVal)
         }
       },
       deep: true,
@@ -168,7 +171,7 @@ export default {
       } else {
         timestamp = "";
       }
-      this.$emit("dateSelected", timestamp);
+      this.$emit("updateDateVal", timestamp);
     },
     timestampToTime(timestamp) {
       let dateObject = {};
