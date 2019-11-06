@@ -4,6 +4,7 @@ import DateSelector from './DateSelector'
 import Select from './select'
 import Option from './option'
 import Textarea from './textarea'
+import Tree from './tree'
 import BlockSelector from './blockSelector'
 import BlockDropdown from './blockDropdown'
 //import '../scss/jf.scss'
@@ -16,6 +17,7 @@ const components = {
   Select,
   Option,
   Textarea,
+  Tree,
   BlockSelector,
   BlockDropdown
 }

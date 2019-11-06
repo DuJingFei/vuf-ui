@@ -33,6 +33,7 @@ module.exports = {
                 '/components/dateselector-demos',
                 '/components/textarea-demos',
                 '/components/block-selector',
+                '/components/tree-demo',
               ]
             }
       ],

@@ -1,0 +1,116 @@
+[
+  {
+    "code": "1212",
+    "id": "1",
+    "name": "金蝶云星空",
+    "type": "product-line",
+    "sort": null,
+    "parentId": null,
+    "productId": null,
+    "knowledges": null,
+    "childs": [
+        {
+            "name": "公有云系列",
+            "id": 1,
+            "code": "gyyxl",
+            "type": "product",
+            "sort": null,
+            "parentId": null,
+            "productId": null,
+            "childs": [
+                {
+                    "name": "财务会计",
+                    "id": 1,
+                    "code": "cwkj",
+                    "type": "domain",
+                    "sort": null,
+                    "parentId": null,
+                    "productId": null,
+                    "childs": [
+                        {
+                            "code": "GL",
+                            "hide": false,
+                            "id": 4979,
+                            "knowledges": 509,
+                            "name": "总账",
+                            "parentId": 4939,
+                            "productId": 1,
+                            "sort": 0,
+                            "type": "module",
+                            "childs": [
+                                {
+                                    "code": "547d3f8213a2a6",
+                                    "id": 8639,
+                                    "knowledges": 19,
+                                    "name": "凭证录入",
+                                    "parentId" : 4918,
+                                    "productId": 9,
+                                    "sort": 1,
+                                    "type": "bizentity",
+                                    "childs": null
+                                },
+                                {
+                                    "code": "547d3f8213a2a6",
+                                    "id": 8629,
+                                    "knowledges": 16,
+                                    "name": "凭证查询",
+                                    "parentId" : 4918,
+                                    "productId": 8,
+                                    "sort": 1,
+                                    "type": "bizentity",
+                                    "childs": null
+                                }
+                            ]
+                        },
+                        {
+                            "code": "ZNKJPT",
+                            "hide": false,
+                            "id": 323,
+                            "knowledges": 509,
+                            "name": "智能会计平台",
+                            "parentId": 982,
+                            "productId": 1,
+                            "sort": 0,
+                            "type": "module",
+                            "childs": [
+                                {
+                                    "code": "513a2a6",
+                                    "id": 8139,
+                                    "knowledges": 11,
+                                    "name": "业务报表对账",
+                                    "parentId" : 4918,
+                                    "productId": 4,
+                                    "sort": 1,
+                                    "type": "bizentity",
+                                    "childs": null
+                                },
+                                {
+                                    "code": "547d3f1a2a6",
+                                    "id": 8630,
+                                    "knowledges": 17,
+                                    "name": "凭证自动生成方案",
+                                    "parentId" : 4919,
+                                    "productId": 6,
+                                    "sort": 1,
+                                    "type": "bizentity",
+                                    "childs": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "财务总览",
+                    "id": 2,
+                    "code": "cwzl",
+                    "type": "domain",
+                    "sort": null,
+                    "parentId": null,
+                    "productId": null,
+                    "childs": null
+                }
+            ]
+        }
+    ]
+  }
+]
