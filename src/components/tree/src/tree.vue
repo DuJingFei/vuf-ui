@@ -1,5 +1,12 @@
 <template>
    <div class="kd-tree card root">
+      <tree-item 
+        v-for="(item, i) in testData"
+        :rankNum='initRank'
+        :key="item.id"
+        :item='item'
+      ></tree-item>
+      <!--
       <section class="kd-product-line" v-for="(productLine , pl) in testData">
         <p class="kd-product-bar">
           <span class="kd-product-name">{{productLine.name}}</span>
@@ -35,15 +42,20 @@
               </ul>
            </section>
         </ul>
-      </section>
+      </section> -->
    </div>
 </template>
 <script>
+import TreeItem from './treeItem'
 export default {
   name: 'kd-tree',
+  components: {
+     TreeItem
+  },
   data() {
       return {
-          testData: require('../treeData.json')
+          testData: require('../treeData.json'),
+          initRank: 1
       }
   },
 }

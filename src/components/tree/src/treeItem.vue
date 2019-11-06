@@ -1,13 +1,15 @@
 <template>
-    <section class="tree-item" :class="{`kd-${item.type}`: true}">
-       <p :class="{`kd-${item.type}-bar`: true}">
-         <span :class="{`kd-${item.type}-name`: true}">{{item.name}}</span>
+    <section class="tree-item" :class="[outStandardClass,outClassName]">
+       <p :class="[barClass]">
+         <span :class="[nameClass]">{{item.name}}</span>
          <span>V</span>
        </p>
-       <ul :class="{`kd-rank-${item.type}`}" v-if="item.childs && item.childs.length > 0">
+       <ul v-if="item.childs && item.childs.length > 0">
           <tree-item 
-            :item='secondItem' 
             v-for="(secondItem, s) in item.childs"
+            :key="secondItem.id"
+            :item='secondItem'
+            :rankNum='(rankNum + 1)'
           ></tree-item>
        </ul>
     </section>
@@ -16,7 +18,17 @@
 export default {
    name: 'tree-item',
    props: {
-      item: [Object]
-   }
+      item: [Object],
+      rankNum: [Number]
+   },
+   data() {
+       return {
+           outClassName: `kd-${this.item.type}`,
+           outStandardClass: `kd-${this.rankNum}`,
+           barClass: `kd-${this.item.type}-bar`,
+           nameClass: `kd-${this.item.type}-name`,
+       }
+   },
+   
 }
 </script>
