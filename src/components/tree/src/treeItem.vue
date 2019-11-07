@@ -6,7 +6,7 @@
          :style="{'paddingLeft': `${ rankNum * 15}px`}"  
        >
          <span :class="[nameClass]">{{item.name}}</span>
-         <span>V</span>
+         <span @click="showChilds">V</span>
        </p>
        <ul v-if="item.childs && item.childs.length > 0">
           <tree-item 
@@ -32,6 +32,11 @@ export default {
            barClass: `kd-${this.rankNum}-bar`,
            nameClass: `kd-${this.rankNum}-name`,
        }
+   },
+   methods: {
+      showChilds() {
+          
+      }
    },
    
 }

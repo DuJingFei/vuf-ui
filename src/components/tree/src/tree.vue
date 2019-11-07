@@ -49,6 +49,10 @@
 import TreeItem from './treeItem'
 export default {
   name: 'kd-tree',
+  props: {
+    data: [Array],
+    initFold: [Boolean], 
+  },
   components: {
      TreeItem
   },
@@ -57,6 +61,9 @@ export default {
           testData: require('../treeData.json'),
           initRank: 1
       }
+  },
+  methods: {
+    
   },
 }
 </script>
