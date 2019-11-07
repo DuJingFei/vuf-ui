@@ -1,6 +1,10 @@
 <template>
     <section class="tree-item" :class="[outStandardClass,outClassName]">
-       <p :class="[barClass]">
+       <p 
+         class="kd-bar" 
+         :class="[barClass]"
+         :style="{'paddingLeft': `${ rankNum * 15}px`}"  
+       >
          <span :class="[nameClass]">{{item.name}}</span>
          <span>V</span>
        </p>
@@ -25,8 +29,8 @@ export default {
        return {
            outClassName: `kd-${this.item.type}`,
            outStandardClass: `kd-${this.rankNum}`,
-           barClass: `kd-${this.item.type}-bar`,
-           nameClass: `kd-${this.item.type}-name`,
+           barClass: `kd-${this.rankNum}-bar`,
+           nameClass: `kd-${this.rankNum}-name`,
        }
    },
    
