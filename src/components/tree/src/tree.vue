@@ -3,7 +3,7 @@
       <tree-item 
         v-for="(item, i) in testData"
         :rankNum='initRank'
-        :key="item.id"
+        :key="i"
         :item='item'
       ></tree-item>
       <!--
@@ -46,6 +46,7 @@
    </div>
 </template>
 <script>
+import eventBus from '../../../libs/utils/bus.js';  
 import TreeItem from './treeItem'
 export default {
   name: 'kd-tree',
@@ -62,8 +63,11 @@ export default {
           initRank: 1
       }
   },
-  methods: {
-    
+  mounted() {
+    eventBus.$on("tree-node-click", (node) => {
+      debugger
+       this.$emit('node-click', node);
+    })
   },
 }
 </script>

@@ -1,17 +1,17 @@
 
 <template>
     <div>
-      <kd-block-dropdwon 
+      <kd-block-option 
          :selectedArray='selectedArray'
-      ></kd-block-dropdwon>
+      ></kd-block-option>
     </div>
 </template>
 <script>
 import BlockDropdown from '@components/blockDropdown'
 export default {
-   name:'block-dropdown',
+   name:'block-option',
    components: {
-      'kd-block-dropdown': BlockDropdown
+      'kd-block-option': BlockDropdown
    },
    data() {
       return {

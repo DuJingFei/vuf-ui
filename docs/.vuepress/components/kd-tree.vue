@@ -1,5 +1,5 @@
 <template>
-   <kd-tree></kd-tree>
+   <kd-tree @node-click="handleNodeClick"></kd-tree>
 </template>
 <script>
 import Tree from '@components/tree'
@@ -7,6 +7,11 @@ export default {
    name: 'kd-tree-demos',
    components: {
       'kd-tree': Tree
+   },
+   methods: {
+      handleNodeClick(nodeVal) {
+         debugger
+      }
    }
 }
 </script>

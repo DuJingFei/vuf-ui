@@ -10,7 +10,7 @@
        </p>
        <ul v-if="item.childs && item.childs.length > 0 && !foldChildNodes">
           <tree-item 
-            v-for="(secondItem, s) in item.childs"
+            v-for="secondItem in item.childs"
             :key="secondItem.id"
             :item='secondItem'
             :rankNum='(rankNum + 1)'
@@ -20,6 +20,7 @@
     </section>
 </template>
 <script>
+import eventBus from '../../../libs/utils/bus.js'; 
 export default {
    name: 'tree-item',
    props: {
@@ -37,10 +38,11 @@ export default {
    },
    methods: {
       controlChildNodes() {
+         debugger
          this.foldChildNodes = !this.foldChildNodes;
-         this.$emit('click',)
+       //  this.$parent.nodeClick(this.item)
+         eventBus.$emit("tree-node-click", this.item);
       }
    },
-   
 }
 </script>
