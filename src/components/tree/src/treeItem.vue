@@ -6,14 +6,15 @@
          :style="{'paddingLeft': `${ rankNum * 15}px`}"  
        >
          <span :class="[nameClass]">{{item.name}}</span>
-         <span @click="showChilds">V</span>
+         <span @click="controlChildNodes">V</span>
        </p>
-       <ul v-if="item.childs && item.childs.length > 0">
+       <ul v-if="item.childs && item.childs.length > 0 && !foldChildNodes">
           <tree-item 
             v-for="(secondItem, s) in item.childs"
             :key="secondItem.id"
             :item='secondItem'
             :rankNum='(rankNum + 1)'
+            :parentNode='item'
           ></tree-item>
        </ul>
     </section>
@@ -31,11 +32,13 @@ export default {
            outStandardClass: `kd-${this.rankNum}`,
            barClass: `kd-${this.rankNum}-bar`,
            nameClass: `kd-${this.rankNum}-name`,
+           foldChildNodes: true, // 是否折叠子节点
        }
    },
    methods: {
-      showChilds() {
-          
+      controlChildNodes() {
+         this.foldChildNodes = !this.foldChildNodes;
+         this.$emit('click',)
       }
    },
    

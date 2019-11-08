@@ -25,7 +25,7 @@
 <script>
 import Button from '@components/button'
 export default {
-   name:'kd-button-demos',
+   name: 'kd-button-demos',
    components: {
       'kd-button': Button
    }
