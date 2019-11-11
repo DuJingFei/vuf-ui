@@ -1,8 +1,14 @@
 <template>
-   <kd-tree 
-     @node-click="handleNodeClick">
-     <span slot="control">+</span>
-   </kd-tree>
+   <div>
+      <kd-tree 
+        :data='testData'
+        @node-trigger="handleNodeClick">
+      </kd-tree>
+      <section v-show="curNode">
+         当前点击的节点是：{{curNode.name}},
+         类型是：{{curNode.type}}
+      </section>
+   </div>
 </template>
 <script>
 import Tree from '@components/tree'
@@ -11,9 +17,17 @@ export default {
    components: {
       'kd-tree': Tree
    },
+   data() {
+      return {
+          testData: require('../public/treeData.json'),
+          curNode:''
+      }
+   },
    methods: {
       handleNodeClick(nodeVal) {
-         debugger
+         if(nodeVal) {
+            this.curNode = nodeVal;
+         }
       }
    }
 }

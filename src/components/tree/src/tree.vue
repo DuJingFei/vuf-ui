@@ -1,7 +1,7 @@
 <template>
    <div class="kd-tree card root">
       <tree-item 
-        v-for="(item, i) in testData"
+        v-for="(item, i) in data"
         :rankNum='initRank'
         :key="item.id"
         :item='item'
@@ -47,6 +47,7 @@
    </div>
 </template>
 <script>
+import eventBus from '../../../libs/utils/bus.js'; 
 import TreeItem from './treeItem'
 export default {
   name: 'kd-tree',
@@ -59,9 +60,13 @@ export default {
   },
   data() {
       return {
-          testData: require('../treeData.json'),
           initRank: 1
       }
+  },
+  mounted() {
+     eventBus.$on("node-click",(itemData) => {
+        this.$emit("node-trigger", itemData);
+     })
   },
   methods: {
     

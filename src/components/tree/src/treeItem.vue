@@ -6,7 +6,7 @@
          :style="{'paddingLeft': `${ rankNum * 10}px`}"  
        >
           <span  :class="[nameClass]">{{item.name}}</span>
-          <span class="control-area" @click="controlChildNodes">V</span>  
+          <span class="control-area" @click="controlChildNodes">V</span>
        </div>
        <ul v-if="item.childs && item.childs.length > 0 && !foldChildNodes">
           <tree-item 
@@ -40,8 +40,7 @@ export default {
    methods: {
       controlChildNodes() {
          this.foldChildNodes = !this.foldChildNodes;
-       //  this.$parent.nodeClick(this.item)
-         eventBus.$emit("tree-node-click", this.item);
+         eventBus.$emit("node-click", this.item);
       }
    },
 }
