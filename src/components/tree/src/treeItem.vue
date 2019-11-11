@@ -1,13 +1,13 @@
 <template>
     <section class="tree-item" :class="[outStandardClass,outClassName]">
-       <p 
+       <div
          class="kd-bar" 
          :class="[barClass]"
-         :style="{'paddingLeft': `${ rankNum * 15}px`}"  
+         :style="{'paddingLeft': `${ rankNum * 10}px`}"  
        >
-         <span :class="[nameClass]">{{item.name}}</span>
-         <span @click="controlChildNodes">V</span>
-       </p>
+          <span  :class="[nameClass]">{{item.name}}</span>
+          <span class="control-area" @click="controlChildNodes">V</span>  
+       </div>
        <ul v-if="item.childs && item.childs.length > 0 && !foldChildNodes">
           <tree-item 
             v-for="secondItem in item.childs"
@@ -25,6 +25,7 @@ export default {
    name: 'tree-item',
    props: {
       item: [Object],
+      parentNode: [Object],
       rankNum: [Number]
    },
    data() {
@@ -38,7 +39,6 @@ export default {
    },
    methods: {
       controlChildNodes() {
-         debugger
          this.foldChildNodes = !this.foldChildNodes;
        //  this.$parent.nodeClick(this.item)
          eventBus.$emit("tree-node-click", this.item);

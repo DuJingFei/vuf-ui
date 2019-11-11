@@ -1,5 +1,8 @@
 <template>
-   <kd-tree @node-click="handleNodeClick"></kd-tree>
+   <kd-tree 
+     @node-click="handleNodeClick">
+     <span slot="control">+</span>
+   </kd-tree>
 </template>
 <script>
 import Tree from '@components/tree'

@@ -3,9 +3,10 @@
       <tree-item 
         v-for="(item, i) in testData"
         :rankNum='initRank'
-        :key="i"
+        :key="item.id"
         :item='item'
-      ></tree-item>
+      >
+      </tree-item>
       <!--
       <section class="kd-product-line" v-for="(productLine , pl) in testData">
         <p class="kd-product-bar">
@@ -46,7 +47,6 @@
    </div>
 </template>
 <script>
-import eventBus from '../../../libs/utils/bus.js';  
 import TreeItem from './treeItem'
 export default {
   name: 'kd-tree',
@@ -63,11 +63,8 @@ export default {
           initRank: 1
       }
   },
-  mounted() {
-    eventBus.$on("tree-node-click", (node) => {
-      debugger
-       this.$emit('node-click', node);
-    })
+  methods: {
+    
   },
 }
 </script>
