@@ -1,7 +1,7 @@
 <template>
    <div class="kd-tree card root">
       <tree-item 
-        v-for="(item, i) in data"
+        v-for="item in data"
         :rankNum='initRank'
         :key="item.id"
         :item='item'
