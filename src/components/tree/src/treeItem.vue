@@ -6,7 +6,8 @@
          :style="{'paddingLeft': `${ rankNum * 10}px`}"  
        >
           <span  :class="[nameClass]">{{item.name}}</span>
-          <i class="icon-add-cicle control-area" @click="controlChildNodes"></i>
+          <i
+            class="icon-add-cicle control-area" @click="controlChildNodes"></i>
        </div>
        <ul v-if="item.childs && item.childs.length > 0 && !foldChildNodes">
           <tree-item 
