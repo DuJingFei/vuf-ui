@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div class="container">
       <kd-tree 
         :data='testData'
         @node-trigger="handleNodeClick">
