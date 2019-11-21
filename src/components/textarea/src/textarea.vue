@@ -63,11 +63,23 @@ export default {
    },
    methods: {
       changeContent() {
-          console.log('1212');
+         debugger
+         let setTimer = '';
+         return function() {
+            debugger
+            console.log('s')
+            
+            if(setTimer) {
+            clearTimeout(setTimer);
+            }
+            setTimer = setTimeout(() => {
+               console.log(12121212)
+            } , 500)
+         }
       },
       focus() {
-          console.log(2);
-          this.showDropdown = true;
+        
+        //  this.showDropdown = true;
       },
       closeDropdown() {
         this.showDropdown = false;
@@ -75,7 +87,7 @@ export default {
       getChoice(val) {
         this.value = val.label
         this.$emit('bindEvent', val.value)
-      }
+      },
    }
 }
 </script>

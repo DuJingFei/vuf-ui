@@ -4,7 +4,7 @@ function resolve (dir) {
 }
 
 module.exports = {
-    title: '文献标准',
+    title: '云社区组件库',
     description: '开发思路描述',
     port:8342,
     head: [
@@ -15,6 +15,8 @@ module.exports = {
       lineNumbers: true // 代码块显示行号
     },
     themeConfig: {
+      logo: '/logo.svg',
+
       sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
       sidebar: [
           {

@@ -2,7 +2,7 @@
   {
     "code": "1212",
     "id": "1",
-    "name": "金蝶云星空1",
+    "name": "云产品系统",
     "type": "product-line",
     "sort": null,
     "parentId": null,
@@ -10,7 +10,7 @@
     "knowledges": null,
     "childs": [
         {
-            "name": "公有云系列",
+            "name": "公有云产品",
             "id": 1,
             "code": "gyyxl",
             "type": "product",

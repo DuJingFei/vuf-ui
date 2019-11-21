@@ -14,3 +14,18 @@ Vue.directive('outsideClick',{
        document.body.removeEventListener('click', el.clickOutsideEvent)
     }
 })
+
+Vue.prototype.debounce1 = function(fn, timer = 500) {
+   let setTimer = '';
+   return function() {
+       console.log('s')
+      if(setTimer) {
+        clearTimeout(setTimer);
+      }
+      setTimer = setTimeout(() => {
+          fn.call(this, arguments)
+      } , timer)
+   }
+}
+
+
