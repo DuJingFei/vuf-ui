@@ -1,6 +1,6 @@
 <template>
    <div class="kd-block-selector">
-      <div class="kd-selector-control" @click.stop="openDropdown">
+      <div class="kd-selector-control"  @click="showDropdown=!showDropdown">
          <div class="selector-remind">
             <span>添加话题</span>
          </div>
@@ -8,10 +8,10 @@
             class="block-options-selector"
             v-for="(item,i) in selectedArray"
             :key="i"
-            @click.prevent='removeItem(item)'
+            @click.stop='removeItem(item)'
          >{{item.name}}</a>
       </div>
-      <div class="kd-block-dropdown">
+      <div class="kd-block-dropdown" v-show="showDropdown">
         <div class="kd-dropdown-select">
            <ul class="kd-select-scrollbar">
                <slot></slot>
@@ -36,6 +36,11 @@ export default {
          type: [Array],
          default: []
      }
+   },
+   data() {
+      return {
+         showDropdown: false,
+      }
    },
    computed: {
        // 所有已选项id集
@@ -83,7 +88,10 @@ export default {
          else {
            this.selectedArray.splice(itemIndex, 1);
          }
-      }
+      },
+      closeDropdown() {
+       this.showDropdown = false;
+     },
    },
 }
 </script>

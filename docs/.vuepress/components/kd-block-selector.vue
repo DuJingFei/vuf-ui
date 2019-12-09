@@ -41,33 +41,40 @@ export default {
                  id: 1,
                  name:'财务',
                  childs: [
-                     {id: 102 , name: '财务新世界'},
-                     {id: 105 , name: '生物多姿'},
-                     {id: 106 , name: '生物多1姿'},
-                     {id: 107 , name: '生物2多姿'}
+                     {id: 102 , name: '电子发票'},
+                     {id: 105 , name: '会计成长'},
+                     {id: 106 , name: '报表分析'},
+                     {id: 107 , name: '预算估值'},
+                     {id: 108 , name: '偷税举报'}
                  ]
              },
              {
                  id: 2,
-                 name:'世界',
+                 name:'金融',
                  childs: [
-                     {id: 103 , name: '财务前沿'},
-                     {id: 112 , name: '生物多姿'},
-                     {id: 14 , name: '生物多姿'},
-                     {id: 12 , name: '生物多姿'}
+                     {id: 103 , name: '指数基金'},
+                     {id: 112 , name: '定投指南'},
+                     {id: 14 , name: '沪深资讯'}
                  ]
              },
              {
                  id: 13,
-                 name:'财务动态'
+                 name:'前端开发',
+                 childs: [
+                     {id: 10343 , name: 'Vue高阶'},
+                     {id: 1766 , name: 'React高阶'},
+                     {id: 1432 , name: 'ES6基础'},
+                     {id: 1299 , name: 'TypeScript'}
+                 ]
              },
              {
                  id: 14,
-                 name:'金蝶云客户'
-             },
-             {
-                 id: 11,
-                 name:'用户成就'
+                 name:'后端开发',
+                 childs: [
+                     {id: 1033 , name: 'Java入门'},
+                     {id: 1129 , name: 'C#本质论'},
+                     {id: 1263 , name: 'Node.js'}
+                 ]
              }
          ], 
       }

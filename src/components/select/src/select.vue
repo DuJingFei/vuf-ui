@@ -48,22 +48,6 @@ export default {
        showDropdown: false,
     }
   },
-  watch: {
-    bindVal: {
-      handler(newVal,val) {
-        if(newVal) {
-          this.result = this.bindVal;
-        }
-      },
-      immediate: true
-    }
-  },
-  created() {
-    // 必须得是在created钩子里注入绑定值
-    if(this.bindVal) {
-       this.result = this.bindVal;
-    }
-  },
   methods: {
      displayDropdown() {
        this.showDropdown = !this.showDropdown;

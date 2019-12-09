@@ -11,7 +11,7 @@ export default {
    name:'kd-option',
    props: ['value', 'label'],
    watch: {
-     '$parent.result': {
+     '$parent.bindVal': {
          handler(newVal , val) {
             if(newVal && newVal === this.value) {
                this.$parent.result = this.label;
