@@ -1,24 +1,4 @@
 <template>
-    <!--
-    <component
-        :is="tag"
-        class="ange-btn"
-        :class="[ btnSize, color, {
-            'default': isDefault,
-            'primary': primary,
-            'secondary': secondary,
-            'dashed': dashed,
-            'link': link,
-            'icon': icon,
-            'circle': circle
-        }]"
-        @click="$emit('click', $event)"
-        :disabled="loading">
-        <span class="ange-btn-content">
-            <slot />
-        </span>
-    </component>  -->
-
     <component 
       :is="tag"
       class="kd-button"
@@ -30,11 +10,10 @@
         'circle': circle,
         'warn': warn,
         'basic': basic,
-        'add-icon':uploadImage,
         'forbid': forbid,
       }]"
     >
-       <span class="icon-upload-image" v-if="uploadImage"></span>
+       <slot name='icon' class="kd-btn-icon"></slot>
        <slot/>
     </component>
 </template>
@@ -59,7 +38,6 @@ export default {
         primary: Boolean,
         warn: Boolean,
         circle: Boolean,
-        uploadImage: Boolean,
         plain: Boolean,
         basic: Boolean,
         forbid: Boolean,

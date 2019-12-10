@@ -1,26 +1,24 @@
 <template>
-    <!--
-    <div>
-       <section class="full-background">
+    <div class="kd-button-area">
+       <section style="margin: 5px 0;min-width:600px" class="full-background">
          <kd-button primary>浅色按钮</kd-button>
          <kd-button circle>默认按钮</kd-button>
          <kd-button warn>橙色</kd-button>
          <kd-button forbid>禁止</kd-button>
-         <kd-button uploadImage>上传图片</kd-button>
          <kd-button size='large'>大图标</kd-button>
-         <kd-button size='large' uploadImage>icon大图标</kd-button>
+         <kd-button size='large'>
+            <i class="icon-upload-image kd-btn-icon" slot="icon"></i>
+            icon大图标
+         </kd-button>
        </section>
 
-       <section class="plain-background">
+       <section  style="margin: 5px 0;min-width:600px" class="plain-background">
          <kd-button plain primary>浅色按钮</kd-button>
          <kd-button plain basic>浅色按钮</kd-button>
          <kd-button plain circle>默认按钮</kd-button>
          <kd-button plain warn>橙色</kd-button>
-         <kd-button plain size='large'>大图标</kd-button>
-         <kd-button plain size='large' uploadImage>icon大图标</kd-button>
        </section>
-    </div>-->
-    <kd-button><slot></slot></kd-button>
+    </div>
 </template>
 <script>
 import Button from '@components/button'
@@ -31,9 +29,4 @@ export default {
    }
 }
 </script>
-<style lang="less">
-section {
-   margin: 5px 0;
-}
-</style>
 
