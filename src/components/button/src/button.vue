@@ -9,8 +9,12 @@
         'primary': primary,
         'circle': circle,
         'warn': warn,
+        'wathet': wathet,
         'basic': basic,
         'forbid': forbid,
+        'small': small,
+        'large': large,
+        'external': external
       }]"
     >
        <slot name='icon' class="kd-btn-icon"></slot>
@@ -37,17 +41,20 @@ export default {
         external: Boolean,
         primary: Boolean,
         warn: Boolean,
+        wathet: Boolean,
         circle: Boolean,
         plain: Boolean,
         basic: Boolean,
         forbid: Boolean,
+        small: Boolean,
+        large: Boolean,
     },
     computed: {
         tag () {
             return this.external ? 'a' : 'button'
         },
         isDefault() {
-            const type = [this.plain, this.secondary, this.dashed, this.link]
+            const type = [this.plain, this.link]
             return type.every((each) => !each)
         }, 
         btnSize() {

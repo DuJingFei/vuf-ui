@@ -7,7 +7,7 @@
     cursor: pointer;
     &.default {
        color: #fff;
-       background: #2386EE;
+       background-color: #2386EE;
        border: none;
        .btn-change-status-block();
        &.warn {
@@ -17,7 +17,7 @@
     }
     &.plain {
        color: #606266;
-       background: #fff;
+       background-color: #fff;
        &.basic {
           color: #2386EE;
           border: 1px solid #2386EE;
@@ -28,6 +28,13 @@
           border: 1px solid #fe7d00;
        }
     }
+    &.wathet {
+       color: #2386ee;
+       background-color: #ebf5ff;
+       &:hover {
+         background-color: #d9edff
+       }
+    }
     &.large {
         padding:0 22px;
         line-height: 45px;
@@ -36,21 +43,18 @@
     }
     &.small {
         line-height: 26px;
-        border-radius: 20px;
-        .btn-change-status-gray();
     }
     &.primary {
         color: #606266;
-        background: #fff;
+        background-color: #fff;
         border: 1px solid #dcdfe6; 
-        .btn-change-status-gray();
     }
     &.circle {
         border-radius: 16px;
     }
     &.forbid {
         cursor: not-allowed;
-        background: #9BC3F0;
+        background-color: #9BC3F0;
         border-color: #9BC3F0;
     }
     .kd-btn-icon {
@@ -58,6 +62,11 @@
       max-height: 16px;
       display: inline-block;
       vertical-align: middle;
+    }
+    &.external {
+        background: none !important;
+        border: none !important;
+        text-decoration: none !important;
     }
 }
 
