@@ -1,9 +1,9 @@
 <template>
    <div 
-     class="basic-card card"
-     :class="{
-        'inline':inline
-     }"
+     class="basic-kd-card kd-card"
+     :class="[shadow, {
+        'inline':inline,
+     }]"
    >
      <slot></slot>
    </div>
@@ -12,7 +12,14 @@
 export default {
    name: 'card',
    props: {
-      inline: [Boolean]
+      inline: Boolean,
+      shadow: {
+         type: String,
+         default: 'always',
+         validator (val) {
+            return new Set(['always', 'never', 'hover']).has(val)
+         }
+      }
    },
 }
 </script>

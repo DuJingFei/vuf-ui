@@ -54,7 +54,7 @@ export default {
             return this.external ? 'a' : 'button'
         },
         isDefault() {
-            const type = [this.plain, this.link]
+            const type = [this.plain, this.link , this.primary]
             return type.every((each) => !each)
         }, 
         btnSize() {

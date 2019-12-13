@@ -1,15 +1,28 @@
-.card {
-    margin-bottom: 2px;
+.kd-card {
+    padding: 24px 20px;
+    font-size: 14px;
+    margin-bottom: 12px;
     background: #fff;
     border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    background: #fff; 
-    border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
+  //  box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
     box-sizing: border-box;
     &.inline {
-       display: inline-block;
+      display: inline-block;
+    }
+    > header {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    &.always {
+      box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
+    }
+    &.hover:hover {
+      box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
+    }
+    &.never {
+      box-shadow: none;
     }
 }

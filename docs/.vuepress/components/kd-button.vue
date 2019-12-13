@@ -33,7 +33,7 @@
             标准
          </kd-button>
          <kd-button small circle>关注</kd-button>
-         <kd-button external primary>默认按钮</kd-button>
+         <kd-button external plain warn>默认按钮</kd-button>
        </section>
     </div>
 </template>
