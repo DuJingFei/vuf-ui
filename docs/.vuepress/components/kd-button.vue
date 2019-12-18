@@ -4,7 +4,7 @@
          <kd-button primary>浅色按钮</kd-button>
          <kd-button circle>默认按钮</kd-button>
          <kd-button wathet circle>
-           <i class="icon-add-small-blue kd-btn-icon" slot="icon"></i>
+           <i class="kd-icon-add kd-btn-icon" slot="icon"></i>
             图标
          </kd-button>
          <kd-button warn>橙色</kd-button>
@@ -29,7 +29,7 @@
          <kd-button forbid small>禁止</kd-button>
          <kd-button plain basic small>普通小</kd-button>
          <kd-button wathet small circle>
-           <i class="icon-add-small-blue kd-btn-icon" slot="icon"></i>
+           <i class="kd-icon-add kd-btn-icon" slot="icon"></i>
             标准
          </kd-button>
          <kd-button small circle>关注</kd-button>

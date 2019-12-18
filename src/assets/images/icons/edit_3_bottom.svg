@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>编辑0</title>
+    <desc>Created with Sketch.</desc>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-推荐" transform="translate(-455.000000, -549.000000)" fill="#9AA5BB">
+            <g id="编组-13" transform="translate(443.000000, 420.000000)">
+                <g id="编组-14备份" transform="translate(0.000000, 118.000000)">
+                    <g id="icon/基础图标/退出-copy-23复制-6" transform="translate(12.000000, 11.000000)">
+                        <g id="编组">
+                            <path d="M1,14 L15,14 L15,15 L1,15 L1,14 Z M12.705,5 C12.892777,4.81243174 12.9982867,4.55790925 12.9982867,4.2925 C12.9982867,4.02709075 12.892777,3.77256826 12.705,3.585 L10.915,1.795 C10.7274317,1.60722296 10.4729092,1.50171334 10.2075,1.50171334 C9.94209075,1.50171334 9.68756826,1.60722296 9.5,1.795 L2,9.295 L2,12.5 L5.205,12.5 L12.705,5 Z M8.705,4 L8,4.705 L9.795,6.5 L10.5,5.795 L8.705,4 Z" id="形状"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

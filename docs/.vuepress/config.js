@@ -29,6 +29,7 @@ module.exports = {
             {
               title: '组件',
               children: [
+                '/components/icon-demos',
                 '/components/button-demos',
                 '/components/card-demos',
                 '/components/select-demos',

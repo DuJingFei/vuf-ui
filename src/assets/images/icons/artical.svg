@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>编辑</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="标签配置" transform="translate(-1479.000000, -164.000000)" fill="#9AA5BB">
+            <g id="编组-8" transform="translate(1202.000000, 92.000000)">
+                <g id="icon/基础图标/退出-copy-22备份-4" transform="translate(277.000000, 72.000000)">
+                    <g id="编组">
+                        <path d="M1.5,21 L22.5,21 L22.5,22.5 L1.5,22.5 L1.5,21 Z M19.0575,7.5 C19.3391656,7.21864761 19.49743,6.83686387 19.49743,6.43875 C19.49743,6.04063613 19.3391656,5.65885239 19.0575,5.3775 L16.3725,2.6925 C16.0911476,2.41083444 15.7093639,2.25257002 15.31125,2.25257002 C14.9131361,2.25257002 14.5313524,2.41083444 14.25,2.6925 L3,13.9425 L3,18.75 L7.8075,18.75 L19.0575,7.5 Z M15.3075,3.75 L18,6.4425 L15.75,8.6925 L13.0575,6 L15.3075,3.75 Z M4.5,17.25 L4.5,14.5575 L12,7.0575 L14.6925,9.75 L7.1925,17.25 L4.5,17.25 Z" id="形状"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
