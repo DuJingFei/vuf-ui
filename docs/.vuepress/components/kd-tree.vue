@@ -2,7 +2,14 @@
    <div class="container">
       <kd-tree 
         :data='testData'
-        @node-trigger="handleNodeClick">
+        @node-trigger="handleNodeClick"
+        initStatusAtr='code'
+        :initUnfolds='{
+          "product-line": "1212",
+          "product": "gyyxl",
+          "domain": "cwkj"
+        }'
+      >
       </kd-tree>
       <section v-show="curNode">
          当前点击的节点是：{{curNode.name}},

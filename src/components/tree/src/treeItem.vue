@@ -4,9 +4,10 @@
          class="kd-bar" 
          :class="[barClass]"
          :style="{'paddingLeft': `${ rankNum * 10}px`}"  
+         @click="controlChildNodes"
        >
-          <span  :class="[nameClass]">{{item.name}}</span>
-          <i v-if="item.childs && item.childs.length > 0" class="control-area" :class="{'kd-icon-fold': !foldChildNodes, 'kd-icon-unfold': foldChildNodes}"  @click="controlChildNodes"></i>
+          <span :class="[nameClass]">{{item.name}}</span>
+          <i v-if="item.childs && item.childs.length > 0" class="control-area" :class="{'kd-icon-fold': !foldChildNodes, 'kd-icon-unfold': foldChildNodes}"  ></i>
        </div>
        <ul v-if="item.childs && item.childs.length > 0 && !foldChildNodes">
           <tree-item 
