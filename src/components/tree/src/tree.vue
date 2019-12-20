@@ -5,6 +5,8 @@
         :rankNum='initRank'
         :key="item.id"
         :item='item'
+        v-bind="$attrs" 
+        
       >
       </tree-item>
    </div>
@@ -18,7 +20,7 @@ export default {
     data: Array,
     initFold: Boolean, 
     initStatusAtr: String,
-    initUnfolds: Object
+   
   },
   components: {
      TreeItem

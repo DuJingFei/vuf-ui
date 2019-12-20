@@ -38,6 +38,9 @@ export default {
            foldChildNodes: true, // 是否折叠子节点
        }
    },
+   mounted() {
+      debugger
+   },
    methods: {
       controlChildNodes() {
          this.foldChildNodes = !this.foldChildNodes;
