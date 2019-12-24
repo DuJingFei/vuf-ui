@@ -5,9 +5,9 @@
         @node-trigger="handleNodeClick"
         initStatusAtr='code'
         :initUnfolds='{
-          "product-line": "1212",
-          "product": "gyyxl",
-          "domain": "cwkj"
+          1: "1212",
+          2: "gyyxl",
+          3: "cwkj"
         }'
       >
       </kd-tree>

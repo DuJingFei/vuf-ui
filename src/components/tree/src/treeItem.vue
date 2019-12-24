@@ -9,13 +9,16 @@
           <span :class="[nameClass]">{{item.name}}</span>
           <i v-if="item.childs && item.childs.length > 0" class="control-area" :class="{'kd-icon-fold': !foldChildNodes, 'kd-icon-unfold': foldChildNodes}"  ></i>
        </div>
-       <ul v-if="item.childs && item.childs.length > 0 && !foldChildNodes">
+       <ul v-show="item.childs && item.childs.length > 0 && !foldChildNodes">
           <tree-item 
             v-for="secondItem in item.childs"
             :key="secondItem.id"
             :item='secondItem'
             :rankNum='(rankNum + 1)'
             :parentNode='item'
+
+            :initStatusAtr='initStatusAtr'
+            :initUnfolds='initUnfolds'
           ></tree-item>
        </ul>
     </section>
@@ -27,7 +30,9 @@ export default {
    props: {
       item: [Object],
       parentNode: [Object],
-      rankNum: [Number]
+      rankNum: [Number],
+      initStatusAtr: String, // 初始化状态所判定的属性名
+      initUnfolds: Object // 初始化状态参数
    },
    data() {
        return {
@@ -38,8 +43,28 @@ export default {
            foldChildNodes: true, // 是否折叠子节点
        }
    },
+   computed: {
+     accordWithUnfold() {
+       if (this.initUnfolds && this.initStatusAtr && this.item && this.rankNum) {
+          return this.item[this.initStatusAtr] == this.initUnfolds[this.rankNum] ? 2 : true
+       }
+       return true
+     }
+   },
+   watch: {
+     accordWithUnfold: {
+       handler(newVal , val) {
+          if (newVal === 2) {
+             debugger
+             this.foldChildNodes = false;
+          }
+       },
+       immediate: true
+     },
+   }, 
    mounted() {
-      debugger
+       
+      // console.log(this.$attrs.initUnfolds)
    },
    methods: {
       controlChildNodes() {

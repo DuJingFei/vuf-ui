@@ -5,8 +5,8 @@
         :rankNum='initRank'
         :key="item.id"
         :item='item'
-        v-bind="$attrs" 
-        
+        :initStatusAtr='initStatusAtr'
+        :initUnfolds='initUnfolds'
       >
       </tree-item>
    </div>
@@ -19,8 +19,8 @@ export default {
   props: {
     data: Array,
     initFold: Boolean, 
-    initStatusAtr: String,
-   
+    initStatusAtr: String, // 初始化状态所判定的属性名
+    initUnfolds: Object // 初始化状态参数
   },
   components: {
      TreeItem
