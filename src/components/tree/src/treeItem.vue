@@ -2,7 +2,9 @@
     <section class="tree-item" :class="[outStandardClass,outClassName]">
        <div
          class="kd-bar" 
-         :class="[barClass]"
+         :class="[barClass, {
+            'has-selected': selectedItemId == item.id
+         }]"
          :style="{'paddingLeft': `${ rankNum * 10}px`}"  
          @click="controlChildNodes"
        >
@@ -19,7 +21,8 @@
 
             :initStatusAtr='initStatusAtr'
             :initUnfolds='initUnfolds'
-          ></tree-item>
+            :selectedItemId='selectedItemId'
+          />
        </ul>
     </section>
 </template>
@@ -28,25 +31,26 @@ import eventBus from '../../../libs/utils/bus.js';
 export default {
    name: 'tree-item',
    props: {
-      item: [Object],
-      parentNode: [Object],
-      rankNum: [Number],
-      initStatusAtr: String, // 初始化状态所判定的属性名
-      initUnfolds: Object // 初始化状态参数
+     item: [Object],
+     parentNode: [Object],
+     rankNum: [Number],
+     initStatusAtr: String, // 初始化状态所判定的属性名
+     initUnfolds: Object, // 初始化状态参数,
+     selectedItemId: [String || Number]
    },
    data() {
-       return {
-           outClassName: `kd-${this.item.type}`,
-           outStandardClass: `kd-${this.rankNum}`,
-           barClass: `kd-${this.rankNum}-bar`,
-           nameClass: `kd-${this.rankNum}-name`,
-           foldChildNodes: true, // 是否折叠子节点
-       }
+     return {
+       outClassName: `kd-${this.item.type}`,
+       outStandardClass: `kd-${this.rankNum}`,
+       barClass: `kd-${this.rankNum}-bar`,
+       nameClass: `kd-${this.rankNum}-name`,
+       foldChildNodes: true, // 是否折叠子节点
+     }
    },
    computed: {
      accordWithUnfold() {
        if (this.initUnfolds && this.initStatusAtr && this.item && this.rankNum) {
-          return this.item[this.initStatusAtr] == this.initUnfolds[this.rankNum] ? 2 : true
+          return this.item[this.initStatusAtr] == this.initUnfolds[this.rankNum] ? false : true
        }
        return true
      }
@@ -54,23 +58,25 @@ export default {
    watch: {
      accordWithUnfold: {
        handler(newVal , val) {
-          if (newVal === 2) {
-             debugger
-             this.foldChildNodes = false;
+          if (!newVal) {
+             if (this.initUnfolds[this.rankNum + 1]) {
+               this.foldChildNodes = false;
+             }
+             else {
+               this.$nextTick(function() {
+                 this.controlChildNodes();
+               })
+             }
           }
        },
        immediate: true
-     },
+     }
    }, 
-   mounted() {
-       
-      // console.log(this.$attrs.initUnfolds)
-   },
    methods: {
-      controlChildNodes() {
-         this.foldChildNodes = !this.foldChildNodes;
-         eventBus.$emit("node-click", this.item);
-      }
+     controlChildNodes() {
+       this.foldChildNodes = !this.foldChildNodes;
+       eventBus.$emit("node-click", this.item);
+     }
    },
 }
 </script>

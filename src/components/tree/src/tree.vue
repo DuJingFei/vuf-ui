@@ -5,10 +5,10 @@
         :rankNum='initRank'
         :key="item.id"
         :item='item'
+        :selectedItemId='curItem && curItem.id'
         :initStatusAtr='initStatusAtr'
         :initUnfolds='initUnfolds'
-      >
-      </tree-item>
+      />
    </div>
 </template>
 <script>
@@ -23,20 +23,23 @@ export default {
     initUnfolds: Object // 初始化状态参数
   },
   components: {
-     TreeItem
+    TreeItem
   },
   data() {
-     return {
-       initRank: 1
-     }
+    return {
+      initRank: 1,
+      curItem: '',
+    }
   },
   mounted() {
-     eventBus.$on("node-click",(itemData) => {
+    let _this = this;
+    eventBus.$on("node-click",(itemData) => {
+       
+      if (itemData) {
+        _this.curItem = itemData;
         this.$emit("node-trigger", itemData);
-     })
-  },
-  methods: {
-    
+      }
+    })
   },
 }
 </script>
