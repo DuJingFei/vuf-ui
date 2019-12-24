@@ -12,8 +12,8 @@
       >
       </kd-tree>
       <section v-show="curNode">
-         当前点击的节点是：{{curNode.name}},
-         类型是：{{curNode.type}}
+         当前点击的节点是：{{ curNode.name }},
+         类型是：{{ curNode.type }}
       </section>
    </div>
 </template>
