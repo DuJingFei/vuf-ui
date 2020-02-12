@@ -1,21 +1,13 @@
 ---
 home: true
-heroImage: /Judentus.png
+heroImage: /Judentus.jpg
 actionText: 开始 →
 actionLink: /install/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
----
+- title: 特有场景
+  details: 针对云社区特定场景（如知识库、课程）等编写组件，实现多平台统一维护。
+- title: 业务驱动
+  details: 以业务驱动为本，充分暴露组件生命周期各钩子函数，不断推陈出新。
+- title: 扩展易用
+  details: 尽可能充分暴露组件生命周期，尽可能考虑组件闭环场景，满足组件易用性和扩展性。
 
-Test 
-```
-function Test() {
-    console.log(1)
-}
-```
