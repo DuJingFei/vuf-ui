@@ -8,7 +8,7 @@ module.exports = {
     description: '针对特定使用场景的组件及方法',
     port:8342,
     head: [
-      ['link', { rel: 'icon', href: '/Judentus.jpg' }], // 增加一个自定义的 favicon(网页标签的图标)
+      ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon(网页标签的图标)
     ],
     base: '/web_accumulate/', // 这是部署到github相关的配置 下面会讲
     markdown: {
