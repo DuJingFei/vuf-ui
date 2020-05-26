@@ -1,5 +1,5 @@
 <template>
-   <component 
-     :is='tag'
-   ></component>
+  <component 
+    :is="tag"
+  />
 </template>

@@ -1,94 +1,99 @@
 <template>
-   <div class="kd-textarea">
-       <section class="textarea-content" v-outsideClick='closeDropdown'>
-          <textarea 
-           v-model="value"
-           :placeholder="placeHolder"
-           :rows='rows'
-           :maxlength="maxLength"
-           @input="changeContent()"
-           @focus="focus()"
-          ></textarea>
-          <div v-show="needRemind && value && value.length > 0" class="limit-remind" >还可输入{{capacity}}个字</div>
-       </section>
-       <section v-if="remoteSearch && showDropdown">
-           <div class="kd-search-remote-dropdown kd-popper">
-              <ul ref="dropdownList" class="kd-search-remote-dropdown__list">
-                 <slot></slot>
-              </ul>
-           </div>
-       </section> 
-   </div>
+  <div class="kd-textarea">
+    <section 
+      v-outsideClick="closeDropdown"
+      class="textarea-content"
+    >
+      <textarea 
+        v-model="value"
+        :placeholder="placeHolder"
+        :rows="rows"
+        :maxlength="maxLength"
+        @input="changeContent()"
+        @focus="focus()"
+      />
+      <div 
+        v-show="needRemind && value && value.length > 0" 
+        class="limit-remind" 
+      >
+        还可输入{{ capacity }}个字
+      </div>
+    </section>
+    <section 
+      v-if="remoteSearch && showDropdown"
+    >
+      <div class="kd-search-remote-dropdown kd-popper">
+        <ul 
+          ref="dropdownList" 
+          class="kd-search-remote-dropdown__list"
+        >
+          <slot />
+        </ul>
+      </div>
+    </section> 
+  </div>
 </template>
 <script>
 export default {
-   name:'kd-textarea',
-   model: {
-      prop: 'bindValue',
-      event: 'bindEvent'
-   },
-   props: {
-       bindValue: [String, Number],
-       needRemind: { // 是否需要输入文字数提示
-          type: Boolean,
-          default: true
-       },
-       maxLength: { // 限制输入字数
-          type: Number,
-          default: 50
-       },
-       remoteSearch: { // 是否远程搜搜
-          type: Boolean,
-          default: false
-       },
-       rows: {
-           type: Number,
-           default: 1
-       },
-       placeHolder: {
-          type: String,
-          default:''
-       }
-   },
-   data() {
-      return {
-        value: this.bindValue,
-        showDropdown: false,
+  name:'KdTextarea',
+  model: {
+    prop: 'bindValue',
+    event: 'bindEvent'
+  },
+  props: {
+    bindValue: [String, Number],
+    needRemind: { // 是否需要输入文字数提示
+      type: Boolean,
+      default: true
+    },
+    maxLength: { // 限制输入字数
+      type: Number,
+      default: 50
+    },
+    remoteSearch: { // 是否远程搜搜
+      type: Boolean,
+      default: false
+    },
+    rows: {
+      type: Number,
+      default: 1
+    },
+    placeHolder: {
+      type: String,
+      default:''
+    }
+  },
+  data() {
+    return {
+      value: this.bindValue,
+      showDropdown: false,
+    }
+  },
+  computed: {
+    capacity() {
+      return this.value ? this.maxLength - this.value.length : this.maxLength;
+    }
+  },
+  methods: {
+    changeContent() {
+      let setTimer = '';
+      return function() {
+        if(setTimer) {
+          clearTimeout(setTimer);
+        }
+        setTimer = setTimeout(() => {
+          console.log(12121212)
+        } , 500)
       }
-   },
-   computed: {
-      capacity() {
-        return this.value ? this.maxLength - this.value.length : this.maxLength;
-      }
-   },
-   methods: {
-      changeContent() {
-         debugger
-         let setTimer = '';
-         return function() {
-            debugger
-            console.log('s')
-            
-            if(setTimer) {
-            clearTimeout(setTimer);
-            }
-            setTimer = setTimeout(() => {
-               console.log(12121212)
-            } , 500)
-         }
-      },
-      focus() {
-        
-        //  this.showDropdown = true;
-      },
-      closeDropdown() {
-        this.showDropdown = false;
-      },
-      getChoice(val) {
-        this.value = val.label
-        this.$emit('bindEvent', val.value)
-      },
-   }
+    },
+    closeDropdown() {
+      this.showDropdown = false;
+    },
+    getChoice(val) {
+      this.value = val.label
+      this.$emit('bindEvent', val.value)
+    },
+  }
 }
 </script>
 <style lang="less">

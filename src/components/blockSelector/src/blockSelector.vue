@@ -1,98 +1,98 @@
 <template>
-   <div class="kd-block-selector">
-      <div class="kd-selector-control"  @click="showDropdown=!showDropdown">
-         <div class="selector-remind">
-            <span>添加话题</span>
-         </div>
-         <a 
-            class="block-options-selector"
-            v-for="(item,i) in selectedArray"
-            :key="i"
-            @click.stop='removeItem(item)'
-         >{{item.name}}</a>
+  <div class="kd-block-selector">
+    <div 
+      class="kd-selector-control"
+      @click="showDropdown=!showDropdown"
+    >
+      <div class="selector-remind">
+        <span>添加话题</span>
       </div>
-      <div class="kd-block-dropdown" v-show="showDropdown">
-        <div class="kd-dropdown-select">
-           <ul class="kd-select-scrollbar">
-               <slot></slot>
-            </ul>
-        </div>
-      </div> 
-   </div>
+      <a 
+        v-for="(item,i) in selectedArray"
+        :key="i"
+        class="block-options-selector"
+        @click.stop="removeItem(item)"
+      >{{ item.name }}</a>
+    </div>
+    <div 
+      v-show="showDropdown"
+      class="kd-block-dropdown"
+    >
+      <div class="kd-dropdown-select">
+        <ul class="kd-select-scrollbar">
+          <slot />
+        </ul>
+      </div>
+    </div> 
+  </div>
 </template>
 <script>
 import _ from 'lodash'
 import Vue from 'vue'
 import Button from '../../button/src/button'
 export default {
-   name: 'block-selector',
-   /*
-   model: {
-     prop: 'selectedArray',
-     event: 'bindSelectedArray'
-   }, */
-   props: {
-     selectedArray: {
-         type: [Array],
-         default: []
-     }
-   },
-   data() {
-      return {
-         showDropdown: false,
+  name: 'block-selector',
+  props: {
+    selectedArray: {
+      type: [Array],
+      default: []
+    }
+  },
+  data() {
+    return {
+      showDropdown: false,
+    }
+  },
+  computed: {
+    selectedIds() {
+      return this.selectedArray && Array.from(this.selectedArray , ({id}) => id);
+    }
+  },
+  watch: {
+    selectedIds: {
+      handler(newVal , val) {
+      // this.$emit('bindSelectedArray', this.selectedArray)
+      // this.statusHandler();
+      },
+      immediate: true,
+      deep: true
+    }
+  },
+  methods: {
+    optionSelector(item) {
+      let index = _.findIndex(this.selectedArray, { id: item.id })
+      if (index !== -1) {
+        this.selectedArray.splice(index, 1);
       }
-   },
-   computed: {
-       // 所有已选项id集
-       selectedIds() {
-          return this.selectedArray && Array.from(this.selectedArray , ({id}) => id);
-       }
-   },
-   watch: {
-      selectedIds: {
-         handler(newVal , val) {
-          // this.$emit('bindSelectedArray', this.selectedArray)
-          // this.statusHandler();
-         },
-         immediate: true,
-         deep: true
+      else {
+        this.selectedArray.push(item);
       }
-   },
-   methods: {
-      optionSelector(item) {
-         let index = _.findIndex(this.selectedArray, { id: item.id })
-         if (index !== -1) {
-            this.selectedArray.splice(index, 1);
-         }
-         else {
-            this.selectedArray.push(item);
-         }
-      },
-      statusHandler() {
-         if(this.selectedIds && this.selectedList && this.selectedList.length > 0) {
-             this.selectedList.forEach((item,f) => {
-                if(item.childs && item.childs.length > 0) {
-                   item.childs.forEach((option,s) => {
-                       let itemIsSelected = Boolean(this.selectedIds.indexOf(option.id) !== -1);
-                       Vue.set(this.selectedList[f].childs[s], 'isSelected' , itemIsSelected ? 1: 0)
-                   })
-                }
-             });
-           }
-      },
-      removeItem(item) {
-         let itemIndex = _.findIndex(this.selectedArray, { id: item.id });
-         if(itemIndex === -1) {
-            this.selectedArray.push(item);
-         }
-         else {
-           this.selectedArray.splice(itemIndex, 1);
-         }
-      },
-      closeDropdown() {
-       this.showDropdown = false;
-     },
-   },
+    },
+    statusHandler() {
+      if(this.selectedIds && this.selectedList && this.selectedList.length > 0) {
+        this.selectedList.forEach((item,f) => {
+          if(item.childs && item.childs.length > 0) {
+            item.childs.forEach((option,s) => {
+              let itemIsSelected = Boolean(this.selectedIds.indexOf(option.id) !== -1);
+              Vue.set(this.selectedList[f].childs[s], 'isSelected' , itemIsSelected ? 1: 0)
+            })
+          }
+        });
+      }
+    },
+    removeItem(item) {
+      let itemIndex = _.findIndex(this.selectedArray, { id: item.id });
+      if(itemIndex === -1) {
+        this.selectedArray.push(item);
+      }
+      else {
+        this.selectedArray.splice(itemIndex, 1);
+      }
+    },
+    closeDropdown() {
+      this.showDropdown = false;
+    },
+  }
 }
 </script>
 <style lang="less">

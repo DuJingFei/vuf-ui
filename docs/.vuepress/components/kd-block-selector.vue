@@ -2,14 +2,13 @@
 <template>
     <div>
       <kd-block-delector 
-         :selectedArray='selectedArray'
-
+        :selectedArray='selectedArray'
       >
-         <kd-block-option 
-           v-for="(item,i) in selectedList"
-           :key="i"
-           :option='item'
-         ></kd-block-option>
+        <kd-block-option 
+          v-for="(item,i) in selectedList"
+          :key="i"
+          :option='item'
+        />
       </kd-block-delector>
     </div>
 </template>

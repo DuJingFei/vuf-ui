@@ -1,8 +1,8 @@
 
 <template>
-    <div>
-      <date-delector v-model="sourceDate" ></date-delector>
-    </div>
+  <div>
+    <date-delector v-model="sourceDate" />
+  </div>
 </template>
 <script>
 import DateSelector from '@components/dateSelector'
