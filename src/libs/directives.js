@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import _ from 'lodash'
 
 Vue.directive('outsideClick',{
   bind: function(el,binding,vnode) {

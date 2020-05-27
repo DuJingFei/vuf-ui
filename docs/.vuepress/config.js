@@ -37,6 +37,7 @@ module.exports = {
                 '/components/textarea-demos',
                 '/components/block-selector',
                 '/components/tree-demo',
+                '/components/file-display-demo',
               ]
             }
       ],

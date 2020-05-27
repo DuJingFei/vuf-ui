@@ -9,6 +9,7 @@
 
 import '../../src/styleLess/common.less' //组件css文件
 import '../../src/libs/directives'
+import '../../src/libs/utils/prototype'
 export default ({
  Vue, // VuePress 正在使用的 Vue 构造函数
  options, // 附加到根实例的一些选项

@@ -27,11 +27,9 @@
   </div>
 </template>
 <script>
-import _ from 'lodash'
 import Vue from 'vue'
-import Button from '../../button/src/button'
 export default {
-  name: 'block-selector',
+  name: 'BlockSelector',
   props: {
     selectedArray: {
       type: [Array],
@@ -60,7 +58,7 @@ export default {
   },
   methods: {
     optionSelector(item) {
-      let index = _.findIndex(this.selectedArray, { id: item.id })
+      let index = this.kdfindIndexById(this.selectedArray, { id: item.id })
       if (index !== -1) {
         this.selectedArray.splice(index, 1);
       }
@@ -81,7 +79,7 @@ export default {
       }
     },
     removeItem(item) {
-      let itemIndex = _.findIndex(this.selectedArray, { id: item.id });
+      let itemIndex = this.kdfindIndexById(this.selectedArray, { id: item.id });
       if(itemIndex === -1) {
         this.selectedArray.push(item);
       }

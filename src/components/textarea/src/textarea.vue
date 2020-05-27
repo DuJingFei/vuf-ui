@@ -60,7 +60,7 @@ export default {
     },
     placeHolder: {
       type: String,
-      default:''
+      default: ''
     }
   },
   data() {

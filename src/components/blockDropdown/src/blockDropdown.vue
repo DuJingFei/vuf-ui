@@ -22,7 +22,6 @@
   </li>
 </template>
 <script>
-import _ from 'lodash'
 import Vue from 'vue'
 import Button from '../../button/src/button'
 export default {
@@ -69,14 +68,14 @@ export default {
       });
     },
     optionSelector(item) {
-      let index = _.findIndex(this.$parent.selectedArray, { id: item.id })
+      let index = this.kdfindIndexById(this.$parent.selectedArray, { id: item.id })
       if (index !== -1) {
         this.$parent.selectedArray.splice(index, 1);
       }
       else {
         this.$parent.selectedArray.push(item);
       }
-    },
+    }
   }
 }
 </script>

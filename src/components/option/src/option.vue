@@ -2,7 +2,7 @@
   <div>
     <li 
       class="kd-select-dropdown__item"
-      @click="choice({ value:value, label:label })"
+      @click="choice({ value: value, label: label })"
     >
       {{ label }}
     </li>
@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name:'kd-option',
+  name:'KdOption',
   props: ['value', 'label'],
   watch: {
     '$parent.bindVal': {

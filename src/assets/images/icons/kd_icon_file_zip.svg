@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="57px" viewBox="0 0 50 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_yasuobao</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="设计图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="搜索_文档" transform="translate(-377.000000, -581.000000)">
+            <g id="卡片/搜索用户-copy-4" transform="translate(359.000000, 559.000000)">
+                <g id="Group-7" transform="translate(18.000000, 22.000000)">
+                    <g id="Group-2">
+                        <g id="Group-Copy-3">
+                            <g id="Rectangle-3">
+                                <path d="M3,0 L47,0 C48.6568542,-3.04359188e-16 50,1.34314575 50,3 L50,54 C50,55.6568542 48.6568542,57 47,57 L3,57 C1.34314575,57 2.02906125e-16,55.6568542 0,54 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="Mask" fill="#5FC500"></path>
+                                <path d="M3,0 L47,0 C48.6568542,-3.04359188e-16 50,1.34314575 50,3 L50,19 L0,19 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="Mask-Copy" fill="#4FC6F9"></path>
+                                <polygon id="Mask-Copy-2" fill="#FC5F5A" points="-7.70371978e-32 19 50 19 50 38 -7.70371978e-32 38"></polygon>
+                            </g>
+                        </g>
+                        <rect id="Rectangle-4" fill="#FFB034" x="19" y="0" width="12" height="57"></rect>
+                        <rect id="Rectangle-5" stroke="#FFFFFF" stroke-width="3" x="17.5" y="22.5" width="15" height="12" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -13,7 +13,6 @@
     </div>
 </template>
 <script>
-import _ from 'lodash'
 import Vue from 'vue';
 import BlockSelector from '@components/blockSelector'
 import BlockDropdown from '@components/blockDropdown'
@@ -100,13 +99,13 @@ export default {
    },
    methods: {
       optionSelector(item) {
-         let index = _.findIndex(this.selectedArray, { id: item.id })
-         if (index !== -1) {
-            this.selectedArray.splice(index, 1);
-         }
-         else {
-            this.selectedArray.push(item);
-         }
+        let index = this.kdfindIndexById(this.selectedArray, { id: item.id })
+        if (index !== -1) {
+          this.selectedArray.splice(index, 1);
+        }
+        else {
+          this.selectedArray.push(item);
+        }
       },
       statusHandler() {
          if(this.selectedIds && this.selectedList && this.selectedList.length > 0) {

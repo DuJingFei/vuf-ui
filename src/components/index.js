@@ -7,6 +7,7 @@ import Textarea from './textarea'
 import Tree from './tree'
 import BlockSelector from './blockSelector'
 import BlockDropdown from './blockDropdown'
+import FileDisplay from './file'
 //import '../scss/jf.scss'
 import '../styleLess/common.less'
 
@@ -19,7 +20,8 @@ const components = {
   Textarea,
   Tree,
   BlockSelector,
-  BlockDropdown
+  BlockDropdown,
+  FileDisplay
 }
 
 const install = function (Vue) {
