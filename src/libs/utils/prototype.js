@@ -2,9 +2,11 @@ import Vue from 'vue'
 import { 
   kdfindIndexById,
   kdfindIndex,
-  cut
+  cut,
+  getBrowserName
 } from './common'
 
-Vue.prototype.kdfindIndexById = kdfindIndexById
-Vue.prototype.kdfindIndex = kdfindIndex
-Vue.prototype.cut = cut
+Vue.prototype.kdfindIndexById = kdfindIndexById;
+Vue.prototype.kdfindIndex = kdfindIndex;
+Vue.prototype.cut = cut;
+Vue.prototype.getBrowserName = getBrowserName;

@@ -8,6 +8,7 @@ import Tree from './tree'
 import BlockSelector from './blockSelector'
 import BlockDropdown from './blockDropdown'
 import FileDisplay from './file'
+import ArrayDragSort from './arrayDragSort'
 //import '../scss/jf.scss'
 import '../styleLess/common.less'
 
@@ -21,7 +22,8 @@ const components = {
   Tree,
   BlockSelector,
   BlockDropdown,
-  FileDisplay
+  FileDisplay,
+  ArrayDragSort
 }
 
 const install = function (Vue) {

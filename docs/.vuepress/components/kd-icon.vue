@@ -54,6 +54,12 @@ export default {
             'kd-icon-classfy',
             'kd-icon-notify',
             'kd-icon-msg',
+            'kd-icon-file-default',
+            'kd-icon-file-excel',
+            'kd-icon-file-pdf',
+            'kd-icon-file-ppt',
+            'kd-icon-file-word',
+            'kd-icon-file-zip'
          ]
       }
    }

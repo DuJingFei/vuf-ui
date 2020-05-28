@@ -1,0 +1,31 @@
+.kd-array-drag-sort {
+  .kd-array-drag-sort-main-content {
+    border: 1px dashed;
+    border-radius: 5px;
+    padding: 6px;
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+    .kd-item-drag {
+       font-size: 12px;
+       padding: 5px;
+       border: 1px solid #2d8cf0;
+       border-bottom: none;
+       cursor: pointer;
+       &:last-child {
+         border-bottom: 1px solid #2d8cf0;
+       }
+     }
+     .kd-cur-node {
+       color: red;
+     }
+  }
+  .kd-label-tips{
+    color:red;
+    margin-bottom: 20px;
+  }
+  > footer {
+     text-align: center;
+  }
+}

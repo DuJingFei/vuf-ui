@@ -4,11 +4,11 @@ function resolve (dir) {
 }
 
 module.exports = {
-    title: '云社区组件库',
+    title: '',
     description: '针对特定使用场景的组件及方法',
     port:8342,
     head: [
-      ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon(网页标签的图标)
+      ['link', { rel: 'icon', href: '/favicon.jpg' }], // 增加一个自定义的 favicon(网页标签的图标)
     ],
     base: '/web_accumulate/', // 这是部署到github相关的配置 下面会讲
     markdown: {
@@ -38,6 +38,7 @@ module.exports = {
                 '/components/block-selector',
                 '/components/tree-demo',
                 '/components/file-display-demo',
+                '/components/array-drag-sort-demo',
               ]
             }
       ],
