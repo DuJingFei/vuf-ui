@@ -20,27 +20,45 @@ module.exports = {
       sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
       sidebar: [
           {
-              title: '入门',
-              children: [
-                '/install/',
-                'get-started/',
-              ]
-            },
-            {
-              title: '组件',
-              children: [
-                '/components/icon-demos',
-                '/components/button-demos',
-                '/components/card-demos',
-                '/components/select-demos',
-                '/components/dateselector-demos',
-                '/components/textarea-demos',
-                '/components/block-selector',
-                '/components/tree-demo',
-                '/components/file-display-demo',
-                '/components/array-drag-sort-demo',
-              ]
-            }
+            title: '入门',
+            children: [
+              '/install/',
+            ]
+          },
+          {
+            title: '组件集',
+            children: [
+              '/components/icon-demos',
+              '/components/button-demos',
+              '/components/card-demos',
+              '/components/select-demos',
+              '/components/dateselector-demos',
+              '/components/textarea-demos',
+              '/components/block-selector',
+              '/components/tree-demo',
+              '/components/file-display-demo',
+              '/components/array-drag-sort-demo',
+            ]
+          },
+          {
+            title: '方法论',
+            children: [
+              '/functions/date-format-adapter',
+              '/functions/find-index-by-id',
+            ]
+          },
+          {
+            title: '开发专栏',
+            children: [
+              '/subjects/start',
+            ]
+          },
+          {
+            title: '吐槽大会',
+            children: [
+              '/vents/start',
+            ]
+          }
       ],
       
       lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间

@@ -40,6 +40,13 @@ export default {
       default: 30
     }
   },
+  data() {
+    return {
+      fileTypeList: {
+        'default': 'kd-icon-file-default',
+      } 
+    }
+  },
   methods: {
     fileType (fileName) {
       if(!fileName && fileName.indexOf('.') == -1){

@@ -100,3 +100,35 @@ export const getBrowserName = () => {
   }
 }
 
+
+/*
+  @params date { Number | String } 时间戳或字符串 
+  @params format { String } 格式字符串 ( YYYY/MM/DD hh:mm:ss)
+*/
+export const DateFormatAdapter = (date , format) => {
+  if (!date) return null;
+  if (typeof date === 'string') {
+    date = date.replace(/-/g, '/');
+    if (date.indexOf('.') != -1){
+      date = date.substring(0,date.indexOf('.'))
+    }
+  }
+  date = new Date(date);
+  let Y = (format && typeof format === 'string' &&  (format.split('Y')).length-1 !== 4) ? date.getFullYear().toString().slice(2) :date.getFullYear();
+
+  let M =  (date.getMonth() >= 0 && date.getMonth() <= 8) ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`;
+  let D = (date.getDate() >= 0 && date.getDate() <= 9) ? `0${date.getDate()}`: `${date.getDate()}`;
+  
+  let h = (date.getHours() >= 0 && date.getHours() <= 9) ? `0${date.getHours()}`: `${date.getHours()}`; 
+
+  let m = (date.getMinutes() >= 0 && date.getMinutes() <= 9) ? `0${date.getMinutes()}`: `${date.getMinutes()}`;
+
+  let s = (date.getSeconds() >= 0 && date.getSeconds() <= 9) ? `0${date.getSeconds()}`: `${date.getSeconds()}`;
+  
+  let formatStr = (format && typeof format === 'string') ? format : 'YYYY-MM-DD hh:mm:ss';
+
+  return formatStr.replace('YYYY', Y).replace('MM',M).replace('DD',D).replace('hh', h).replace('mm', m).replace('ss', s).replace(/(^\s*)|(\s*$)/g, '')
+}
+
+
+

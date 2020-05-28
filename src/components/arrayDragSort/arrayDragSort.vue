@@ -46,7 +46,7 @@ export default {
       type: [Object],
       default: () => { return {}}
     },
-    sortArray: { 
+    sortArray: {
       type: Array,
       default: () => { return []}
     },
