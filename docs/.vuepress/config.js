@@ -4,7 +4,7 @@ function resolve (dir) {
 }
 
 module.exports = {
-    title: '',
+    title: '开发论坛',
     description: '针对特定使用场景的组件及方法',
     port:8342,
     head: [
@@ -26,7 +26,7 @@ module.exports = {
             ]
           },
           {
-            title: '组件集',
+            title: '前端组件库',
             children: [
               '/components/icon-demos',
               '/components/button-demos',
@@ -41,7 +41,7 @@ module.exports = {
             ]
           },
           {
-            title: '方法论',
+            title: '前端方法论',
             children: [
               '/functions/date-format-adapter',
               '/functions/find-index-by-id',

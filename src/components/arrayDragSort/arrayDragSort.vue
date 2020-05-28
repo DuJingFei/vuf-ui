@@ -19,7 +19,7 @@
       </p>
     </article>
     <p class="kd-label-tips"> 
-      注：<span v-if="getBrowserName()=='IE'">请在非IE内核浏览器下，</span>
+      注：<span>请在非IE内核浏览器下，</span>
       拖拽表格中所需调整位置的行至目标行
     </p>
     <footer>
