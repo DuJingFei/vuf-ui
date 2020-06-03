@@ -75,6 +75,9 @@ export default {
     }
   },
   methods: {
+    focus() {
+
+    },
     changeContent() {
       let setTimer = '';
       return function() {

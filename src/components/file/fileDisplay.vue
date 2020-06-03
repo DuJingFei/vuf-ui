@@ -9,12 +9,12 @@
         <i 
           class="kd-file-icon"
           :class="fileType(item.name)"
-        ></i>
+        />
         <a 
           class="kd-file-content"
           href="javascript:void(0);"
           @click="downloadFile(item)"
-        >{{ item.name | cut(cutLength) }}</a>  
+        >{{ cut(item.name, cutLength) }}</a>  
         <span class="kd-file-size">({{ fileSizeConvert(item.fileSize) }})</span>
       </p>
     </template>

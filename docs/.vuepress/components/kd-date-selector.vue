@@ -1,15 +1,15 @@
 
 <template>
   <div>
-    <date-delector v-model="sourceDate" />
+    <kd-date-selector v-model="sourceDate" />
   </div>
 </template>
 <script>
 import DateSelector from '@components/dateSelector'
 export default {
-   name:'date-selector',
+   name:'kd-date-selector-demo',
    components: {
-      'date-delector': DateSelector
+      'kd-date-selector': DateSelector
    },
    data() {
       return {

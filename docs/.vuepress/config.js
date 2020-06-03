@@ -4,13 +4,14 @@ function resolve (dir) {
 }
 
 module.exports = {
-    title: '开发论坛',
+    title: '组件库',
     description: '针对特定使用场景的组件及方法',
+    host: '172.20.102.31',
     port:8342,
     head: [
       ['link', { rel: 'icon', href: '/favicon.jpg' }], // 增加一个自定义的 favicon(网页标签的图标)
     ],
-    base: '/web_accumulate/', // 这是部署到github相关的配置 下面会讲
+    base: '/webfront_accumulate/', // 这是部署到github相关的配置 下面会讲
     markdown: {
       lineNumbers: true // 代码块显示行号
     },
@@ -32,12 +33,12 @@ module.exports = {
               '/components/button-demos',
               '/components/card-demos',
               '/components/select-demos',
-              '/components/dateselector-demos',
-              '/components/textarea-demos',
               '/components/block-selector',
               '/components/tree-demo',
               '/components/file-display-demo',
               '/components/array-drag-sort-demo',
+              '/components/date-selector-demos',
+              '/components/textarea-demos',
             ]
           },
           {
