@@ -9,6 +9,7 @@ import BlockSelector from './blockSelector'
 import BlockDropdown from './blockDropdown'
 import FileDisplay from './file'
 import ArrayDragSort from './arrayDragSort'
+import Calendar from './calendar'
 //import '../scss/jf.scss'
 import '../styleLess/common.less'
 
@@ -23,7 +24,8 @@ const components = {
   BlockSelector,
   BlockDropdown,
   FileDisplay,
-  ArrayDragSort
+  ArrayDragSort,
+  Calendar
 }
 
 const install = function (Vue) {

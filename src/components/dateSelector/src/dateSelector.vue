@@ -109,7 +109,7 @@
 </template>
 <script>
 export default {
-  name: "date-selector",
+  name: "KdDateSelector",
   model: {
     prop: 'dateVal',
     event: 'updateDateVal'

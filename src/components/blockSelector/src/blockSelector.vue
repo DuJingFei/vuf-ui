@@ -29,7 +29,7 @@
 <script>
 import Vue from 'vue'
 export default {
-  name: 'BlockSelector',
+  name: 'KdBlockSelector',
   props: {
     selectedArray: {
       type: [Array],

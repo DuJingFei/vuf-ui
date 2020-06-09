@@ -40,7 +40,7 @@
 </template>
 <script>
 export default {
-  name: 'ArrayDragSort',
+  name: 'KdArrayDragSort',
   props: {
     curItem: {
       type: [Object],

@@ -38,6 +38,7 @@ module.exports = {
               '/components/file-display-demo',
               '/components/array-drag-sort-demo',
               '/components/date-selector-demos',
+              '/components/calendar-demo',
               '/components/textarea-demos',
             ]
           },
